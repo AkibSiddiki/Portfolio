@@ -515,12 +515,12 @@
   }
 
   function handleThemeToggle() {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
     const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
     applyTheme(nextTheme, true);
   }
 
-  const activeTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
   updateThemeAria(activeTheme);
 
   if (themeToggleBtn) {
@@ -533,14 +533,14 @@
 
   // Sync with OS preference changes if no manual preference stored
   try {
-    const osColorQuery = window.matchMedia('(prefers-color-scheme: light)');
+    const osColorQuery = window.matchMedia('(prefers-color-scheme: dark)');
     osColorQuery.addEventListener('change', (e) => {
       let saved = null;
       try {
         saved = localStorage.getItem('theme');
       } catch (err) {}
       if (!saved) {
-        applyTheme(e.matches ? 'light' : 'dark', false);
+        applyTheme(e.matches ? 'dark' : 'light', false);
       }
     });
   } catch (e) {}
