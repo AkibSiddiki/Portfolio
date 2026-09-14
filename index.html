@@ -286,33 +286,116 @@
             </div>
           </div>
 
-          <!-- Right Column: Developer Terminal Card & Profile Preview -->
+          <!-- Right Column: Developer Portrait & Visual Showcase -->
           <div class="hero-visual-col reveal-element">
-            <div class="terminal-card">
-              <!-- Window Header -->
-              <div class="terminal-header">
-                <div class="terminal-dots" aria-hidden="true">
-                  <span class="dot dot-close"></span>
-                  <span class="dot dot-minimize"></span>
-                  <span class="dot dot-expand"></span>
-                </div>
-                <div class="terminal-title">bash — akib@macbook</div>
-                <div class="terminal-pill">zsh</div>
+            <div class="hero-showcase-container">
+              <!-- Mode Switcher Tabs -->
+              <div class="hero-view-switcher" role="tablist" aria-label="Hero visual view switcher">
+                <button class="hero-switcher-btn active" id="hero-tab-portrait" role="tab" aria-selected="true" aria-controls="hero-panel-portrait" type="button">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>Portrait</span>
+                </button>
+                <button class="hero-switcher-btn" id="hero-tab-terminal" role="tab" aria-selected="false" aria-controls="hero-panel-terminal" type="button">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="4 17 10 11 4 5"></polyline>
+                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                  </svg>
+                  <span>Terminal</span>
+                </button>
               </div>
 
-              <!-- Terminal Body -->
-              <div class="terminal-body" id="terminal-body">
-                <div class="terminal-line">
-                  <span class="t-prompt">$</span>
-                  <span class="t-cmd">whoami</span>
-                </div>
-                <div class="terminal-output t-name">Akib Siddiki</div>
+              <!-- Panel 1: Developer Portrait Showcase (Default) -->
+              <div class="hero-panel hero-panel-portrait active" id="hero-panel-portrait" role="tabpanel" aria-labelledby="hero-tab-portrait">
+                <div class="hero-portrait-showcase">
+                  <!-- Ambient Multi-layered Glow Backlight -->
+                  <div class="hero-portrait-glow" aria-hidden="true"></div>
 
-                <div class="terminal-line">
-                  <span class="t-prompt">$</span>
-                  <span class="t-cmd">cat profile.json</span>
+                  <!-- Geometric Tech Grid Overlay & Watermarks -->
+                  <div class="hero-frame-accent frame-corner-tl" aria-hidden="true">+</div>
+                  <div class="hero-frame-accent frame-corner-tr" aria-hidden="true">+</div>
+                  <div class="hero-frame-accent frame-corner-bl" aria-hidden="true">+</div>
+                  <div class="hero-frame-accent frame-corner-br" aria-hidden="true">+</div>
+                  <div class="hero-telemetry-badge" aria-hidden="true">
+                    <span class="telemetry-chip">DHAKA // 23.81° N</span>
+                    <span class="telemetry-chip chip-accent">ONLINE</span>
+                  </div>
+
+                  <!-- Portrait Card Frame -->
+                  <div class="hero-portrait-frame">
+                    <img src="assets/images/me.png" alt="Akib Siddiki - Full Stack Developer" class="hero-portrait-img" width="800" height="800" loading="eager" fetchpriority="high">
+                    <div class="hero-portrait-vignette" aria-hidden="true"></div>
+                  </div>
+
+                  <!-- Floating Glassmorphic Badge 1: Live Status (Top-Right) -->
+                  <div class="hero-float-badge float-badge-status" aria-label="Current status: Open for opportunities">
+                    <span class="status-pulse-dot" aria-hidden="true"></span>
+                    <div class="float-badge-text">
+                      <span class="float-badge-title">Open for Opportunities</span>
+                      <span class="float-badge-sub">Full Stack & Mobile</span>
+                    </div>
+                  </div>
+
+                  <!-- Floating Glassmorphic Badge 2: Experience & Stack (Bottom-Left) -->
+                  <div class="hero-float-badge float-badge-experience">
+                    <div class="float-exp-icon" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                      </svg>
+                    </div>
+                    <div class="float-badge-text">
+                      <div class="float-exp-heading">
+                        <span class="float-exp-num">4+</span>
+                        <span class="float-exp-unit">Years at eMythMakers</span>
+                      </div>
+                      <div class="float-stack-tags">
+                        <span class="stack-mini-pill">Laravel</span>
+                        <span class="stack-mini-pill">Flutter</span>
+                        <span class="stack-mini-pill">MySQL</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Floating Glassmorphic Badge 3: Interactive Live Typewriter Capsule (Bottom-Center) -->
+                  <div class="hero-float-badge float-badge-terminal" aria-label="Active terminal typewriter">
+                    <span class="t-prompt" aria-hidden="true">$</span>
+                    <span class="t-typed" id="typed-command">explore --experience</span>
+                    <span class="terminal-cursor" aria-hidden="true"></span>
+                  </div>
                 </div>
-                <div class="terminal-output code-block">
+              </div>
+
+              <!-- Panel 2: Interactive Developer Terminal Card -->
+              <div class="hero-panel hero-panel-terminal" id="hero-panel-terminal" role="tabpanel" aria-labelledby="hero-tab-terminal" hidden>
+                <div class="terminal-card">
+                  <!-- Window Header -->
+                  <div class="terminal-header">
+                    <div class="terminal-dots" aria-hidden="true">
+                      <span class="dot dot-close"></span>
+                      <span class="dot dot-minimize"></span>
+                      <span class="dot dot-expand"></span>
+                    </div>
+                    <div class="terminal-title">bash — akib@macbook</div>
+                    <div class="terminal-pill">zsh</div>
+                  </div>
+
+                  <!-- Terminal Body -->
+                  <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-line">
+                      <span class="t-prompt">$</span>
+                      <span class="t-cmd">whoami</span>
+                    </div>
+                    <div class="terminal-output t-name">Akib Siddiki</div>
+
+                    <div class="terminal-line">
+                      <span class="t-prompt">$</span>
+                      <span class="t-cmd">cat profile.json</span>
+                    </div>
+                    <div class="terminal-output code-block">
 <span class="t-punct">{</span>
   <span class="t-key">"role"</span><span class="t-punct">:</span> <span class="t-str">"Full Stack PHP/Laravel Developer"</span><span class="t-punct">,</span>
   <span class="t-key">"experience"</span><span class="t-punct">:</span> <span class="t-str">"4+ Years at eMythMakers"</span><span class="t-punct">,</span>
@@ -321,29 +404,32 @@
   <span class="t-key">"status"</span><span class="t-punct">:</span> <span class="t-accent">"open_for_opportunities"</span>
 <span class="t-punct">}</span></div>
 
-                <div class="terminal-line active-line">
-                  <span class="t-prompt">$</span>
-                  <span class="t-typed" id="typed-command">explore --experience</span>
-                  <span class="terminal-cursor"></span>
+                    <div class="terminal-line active-line">
+                      <span class="t-prompt">$</span>
+                      <span class="t-typed t-typed-alt">explore --experience</span>
+                      <span class="terminal-cursor"></span>
+                    </div>
+                  </div>
+
+                  <!-- Mini Profile Overlay Bar -->
+                  <div class="terminal-footer">
+                    <div class="mini-profile">
+                      <img src="assets/images/me.png" alt="Akib Siddiki" class="mini-avatar" width="44" height="44" loading="lazy">
+                      <div class="mini-profile-text">
+                        <span class="mini-name">Akib Siddiki</span>
+                        <span class="mini-role">Software Engineer</span>
+                      </div>
+                    </div>
+                    <a href="#about" class="terminal-scroll-hint" aria-label="Scroll to about section">
+                      <span>Learn more</span>
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                        <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <!-- Mini Profile Overlay Bar -->
-              <div class="terminal-footer">
-                <div class="mini-profile">
-                  <img src="assets/images/me.png" alt="Akib Siddiki" class="mini-avatar" width="44" height="44" loading="eager">
-                  <div class="mini-profile-text">
-                    <span class="mini-name">Akib Siddiki</span>
-                    <span class="mini-role">Software Engineer</span>
-                  </div>
-                </div>
-                <a href="#about" class="terminal-scroll-hint" aria-label="Scroll to about section">
-                  <span>Learn more</span>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                    <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </a>
-              </div>
             </div>
           </div>
 
@@ -377,36 +463,46 @@
           </div>
         </div>
 
-        <!-- Section Header exactly matching screenshot -->
+        <!-- Section Header -->
         <div class="about-header-block reveal-element">
-          <div class="section-kicker">// ABOUT ME</div>
+          <div class="section-kicker">// 01 — ABOUT ME</div>
           <h2 class="about-mubx-title">
             The person behind<br>
             <span class="text-accent">the terminal.</span>
           </h2>
         </div>
 
-        <div class="about-grid">
-          <!-- Left Column: Professional Narrative -->
-          <div class="about-left reveal-element">
-            <div class="about-narrative">
-              <p class="lead-p">
-                Full Stack Engineer based in Dhaka, architecting high-scale backends, APIs, and mobile applications at <strong>eMythMakers</strong>.
-              </p>
-              <p>
-                I specialize in modular Laravel systems, optimized MySQL databases, and cross-platform Flutter apps—powering real-time platforms like <em>bdnews24</em> and <em>Samakal</em> that serve hundreds of thousands of daily users.
-              </p>
-            </div>
+        <!-- Simplified, Clean Narrative Container -->
+        <div class="about-content-wrap reveal-element">
+          <div class="about-narrative">
+            <p class="lead-p">
+              I am a Full Stack Software Engineer based in Dhaka, Bangladesh, dedicated to building reliable, high-performance web systems, resilient database architectures, and production-ready mobile applications.
+            </p>
+            <p>
+              Over 4+ years of engineering at <strong>eMythMakers</strong>, I have designed and maintained core backends for high-traffic national news platforms—including <em>bdnews24</em> and <em>Samakal</em>—handling heavy concurrent traffic, fast-breaking publishing workflows, and millions of page views with sub-second API response times.
+            </p>
+            <p>
+              My approach prioritizes simplicity and robust engineering over superficial complexity: modular <strong>Laravel</strong> architectures, carefully indexed <strong>MySQL</strong> schemas, <strong>Redis</strong> caching layers, defensive <strong>RESTful APIs</strong>, and responsive <strong>Flutter</strong> mobile apps that deliver seamless real-world experiences.
+            </p>
           </div>
 
-          <!-- Right Column: High-Res Portrait Card -->
-          <div class="about-right reveal-element">
-            <div class="about-image-card">
-              <img src="assets/images/me.png" alt="Akib Siddiki - Professional Software Engineer" class="about-avatar" width="1024" height="1024" loading="lazy">
-              <div class="image-overlay-badge">
-                <span class="badge-role">Full Stack Developer</span>
-                <span class="badge-location">Dhaka, Bangladesh</span>
-              </div>
+          <!-- Quick Engineering Specs Strip -->
+          <div class="about-specs-grid">
+            <div class="about-spec-item">
+              <span class="spec-label">Location</span>
+              <span class="spec-value">Dhaka, Bangladesh</span>
+            </div>
+            <div class="about-spec-item">
+              <span class="spec-label">Current Role</span>
+              <span class="spec-value">Software Engineer @ eMythMakers</span>
+            </div>
+            <div class="about-spec-item">
+              <span class="spec-label">Core Specialization</span>
+              <span class="spec-value">Backend &amp; Database Architecture</span>
+            </div>
+            <div class="about-spec-item">
+              <span class="spec-label">Mobile Development</span>
+              <span class="spec-value">Flutter &amp; Dart</span>
             </div>
           </div>
         </div>

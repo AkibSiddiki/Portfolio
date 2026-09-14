@@ -156,10 +156,80 @@
   }
 
   /* --------------------------------------------------------------------------
-     5. TERMINAL COMMAND TYPEWRITER EFFECT
+     5. HERO SHOWCASE VIEW SWITCHER & TERMINAL TYPEWRITER
      -------------------------------------------------------------------------- */
-  const typedCommandEl = document.getElementById('typed-command');
-  if (typedCommandEl && !prefersReducedMotion) {
+  // Mode Switcher Tabs (Portrait vs Terminal)
+  const tabPortrait = document.getElementById('hero-tab-portrait');
+  const tabTerminal = document.getElementById('hero-tab-terminal');
+  const panelPortrait = document.getElementById('hero-panel-portrait');
+  const panelTerminal = document.getElementById('hero-panel-terminal');
+
+  function switchHeroView(mode) {
+    if (mode === 'portrait') {
+      if (tabPortrait) {
+        tabPortrait.classList.add('active');
+        tabPortrait.setAttribute('aria-selected', 'true');
+        tabPortrait.setAttribute('tabindex', '0');
+      }
+      if (tabTerminal) {
+        tabTerminal.classList.remove('active');
+        tabTerminal.setAttribute('aria-selected', 'false');
+        tabTerminal.setAttribute('tabindex', '-1');
+      }
+      if (panelPortrait) {
+        panelPortrait.classList.add('active');
+        panelPortrait.removeAttribute('hidden');
+      }
+      if (panelTerminal) {
+        panelTerminal.classList.remove('active');
+        panelTerminal.setAttribute('hidden', '');
+      }
+    } else if (mode === 'terminal') {
+      if (tabTerminal) {
+        tabTerminal.classList.add('active');
+        tabTerminal.setAttribute('aria-selected', 'true');
+        tabTerminal.setAttribute('tabindex', '0');
+      }
+      if (tabPortrait) {
+        tabPortrait.classList.remove('active');
+        tabPortrait.setAttribute('aria-selected', 'false');
+        tabPortrait.setAttribute('tabindex', '-1');
+      }
+      if (panelTerminal) {
+        panelTerminal.classList.add('active');
+        panelTerminal.removeAttribute('hidden');
+      }
+      if (panelPortrait) {
+        panelPortrait.classList.remove('active');
+        panelPortrait.setAttribute('hidden', '');
+      }
+    }
+  }
+
+  if (tabPortrait && tabTerminal) {
+    tabPortrait.addEventListener('click', () => switchHeroView('portrait'));
+    tabTerminal.addEventListener('click', () => switchHeroView('terminal'));
+
+    // Keyboard navigation (Arrow keys between tabs)
+    [tabPortrait, tabTerminal].forEach(btn => {
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          if (btn === tabPortrait) {
+            tabTerminal.focus();
+            switchHeroView('terminal');
+          } else {
+            tabPortrait.focus();
+            switchHeroView('portrait');
+          }
+        }
+      });
+    });
+  }
+
+  // Synchronized Terminal Command Typewriter Effect
+  const typedCommandEls = document.querySelectorAll('#typed-command, .t-typed-alt');
+  if (typedCommandEls.length > 0 && !prefersReducedMotion) {
     const commands = [
       'explore --experience',
       'php artisan test --parallel',
@@ -173,15 +243,23 @@
     let isDeleting = false;
     let typingDelay = 120;
 
+    function updateTypedText(text) {
+      typedCommandEls.forEach(el => {
+        el.textContent = text;
+      });
+    }
+
     function typeLoop() {
       const currentCommand = commands[cmdIndex];
 
       if (isDeleting) {
-        typedCommandEl.textContent = currentCommand.substring(0, charIndex - 1);
+        const text = currentCommand.substring(0, charIndex - 1);
+        updateTypedText(text);
         charIndex--;
         typingDelay = 45;
       } else {
-        typedCommandEl.textContent = currentCommand.substring(0, charIndex + 1);
+        const text = currentCommand.substring(0, charIndex + 1);
+        updateTypedText(text);
         charIndex++;
         typingDelay = 110;
       }
