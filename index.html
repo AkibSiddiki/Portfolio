@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FF2E2E">
+  <title>Akib Siddiki | Full Stack PHP/Laravel & Flutter Developer</title>
+  <meta name="description" content="Akib Siddiki is an experienced Full Stack PHP/Laravel Developer in Dhaka, Bangladesh specializing in scalable backend systems, database architecture, RESTful APIs, and Flutter mobile applications.">
+  <meta name="keywords" content="Akib Siddiki, Full Stack Developer, Laravel Developer, PHP Developer, Laravel Bangladesh, Flutter Developer, Backend Developer, Software Engineer, MySQL, Redis, RESTful API">
+  <meta name="author" content="Akib Siddiki">
+  <link rel="canonical" href="https://akibsiddiki.github.io/AkibSiddiki/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akibsiddiki.github.io/AkibSiddiki/">
+  <meta property="og:title" content="Akib Siddiki | Full Stack PHP/Laravel & Flutter Developer">
+  <meta property="og:description" content="Building reliable digital products, from high-performance backend systems to production-ready mobile applications.">
+  <meta property="og:image" content="assets/images/me.png">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://akibsiddiki.github.io/AkibSiddiki/">
+  <meta name="twitter:title" content="Akib Siddiki | Full Stack PHP/Laravel & Flutter Developer">
+  <meta name="twitter:description" content="Building reliable digital products, from high-performance backend systems to production-ready mobile applications.">
+  <meta name="twitter:image" content="assets/images/me.png">
+
+  <!-- Typography: Inter, JetBrains Mono & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Inline Theme Script (Prevents FOUC) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Akib Siddiki",
+    "jobTitle": "Full Stack PHP/Laravel Developer",
+    "url": "https://akibsiddiki.github.io/AkibSiddiki/",
+    "image": "assets/images/me.png",
+    "sameAs": [
+      "https://github.com/AkibSiddiki",
+      "https://www.linkedin.com/in/akib-siddiki-apu/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dhaka",
+      "addressCountry": "BD"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Eastern University, Dhaka"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Tangail Polytechnic Institute"
+      }
+    ],
+    "knowsAbout": [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Flutter",
+      "Dart",
+      "RESTful APIs",
+      "Redis",
+      "Database Architecture",
+      "Tailwind CSS",
+      "JavaScript"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Custom Cursor (Desktop Only) -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Ambient Top Accent Line -->
+  <div class="top-accent-line" aria-hidden="true"></div>
+
+  <!-- Background Ambience System -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="ambient-spotlight" id="ambient-spotlight" aria-hidden="true"></div>
+  <div class="ambient-noise" aria-hidden="true"></div>
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <div class="ambient-telemetry" aria-hidden="true">
+    <span class="hud-dot"></span>
+    <span class="hud-coords">23.8103° N, 90.4125° E</span>
+    <span class="hud-sep">//</span>
+    <span class="hud-tz">DHAKA_BD [UTC+6]</span>
+  </div>
+
+  <!-- ==================================================
+       1. NAVIGATION
+       ================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <!-- Left: Brand & Availability -->
+      <div class="header-brand">
+        <a href="#hero" class="brand-logo" aria-label="Akib Siddiki - Home">
+          <span class="brand-prefix">//</span>
+          <span class="brand-name">AKIB SIDDIKI</span>
+          <span class="cursor-blink">_</span>
+        </a>
+
+        <!-- Status Indicator (Desktop) -->
+        <div class="status-indicator-wrapper" aria-label="Current Availability Status">
+          <span class="status-pulse" aria-hidden="true"></span>
+          <span class="status-text">Available for opportunities</span>
+        </div>
+      </div>
+
+      <!-- Right: Navigation & Action Controls -->
+      <div class="header-right">
+        <!-- Desktop Nav -->
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#expertise" class="nav-link">Expertise</a></li>
+            <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+            <li><a href="#contact" class="nav-link contact-pill">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions (Theme & Menu) -->
+        <div class="header-actions">
+          <!-- Theme Toggle Button -->
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+            <!-- Sun Icon (visible in dark mode) -->
+            <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (visible in light mode) -->
+            <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Mobile Hamburger Button -->
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-top">
+        <div class="mobile-status">
+          <span class="status-pulse" aria-hidden="true"></span>
+          <span class="status-text">Available for opportunities</span>
+        </div>
+        <button class="theme-toggle mobile-drawer-theme-toggle" id="mobile-theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+          <svg class="theme-icon sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link"><span class="nav-num">01.</span> About</a></li>
+        <li><a href="#experience" class="mobile-nav-link"><span class="nav-num">02.</span> Experience</a></li>
+        <li><a href="#tech-stack" class="mobile-nav-link"><span class="nav-num">03.</span> Tech Stack</a></li>
+        <li><a href="#projects" class="mobile-nav-link"><span class="nav-num">04.</span> Projects</a></li>
+        <li><a href="#expertise" class="mobile-nav-link"><span class="nav-num">05.</span> Expertise</a></li>
+        <li><a href="#philosophy" class="mobile-nav-link"><span class="nav-num">06.</span> Philosophy</a></li>
+        <li><a href="#contact" class="mobile-nav-link highlight"><span class="nav-num">07.</span> Contact Me</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <p class="font-mono text-xs text-muted">// DHAKA, BANGLADESH [UTC+6]</p>
+        <div class="mobile-socials">
+          <a href="https://github.com/AkibSiddiki" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
+          <a href="https://www.linkedin.com/in/akib-siddiki-apu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">IN</a>
+          <a href="mailto:akib.siddiki@gmail.com" aria-label="Email">MAIL</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==================================================
+         2. HERO SECTION
+         ================================================== -->
+    <section class="hero-section section-block" id="hero">
+      <!-- Decorative Modern Background Watermark Motif (like Image 2) -->
+      <div class="hero-bg-motif" aria-hidden="true">
+        <svg viewBox="0 0 160 160" fill="none" stroke="currentColor">
+          <line x1="80" y1="15" x2="80" y2="145" stroke-width="3" stroke-linecap="round"/>
+          <line x1="15" y1="80" x2="145" y2="80" stroke-width="3" stroke-linecap="round"/>
+          <line x1="34" y1="34" x2="126" y2="126" stroke-width="3" stroke-linecap="round"/>
+          <line x1="34" y1="126" x2="126" y2="34" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-grid">
+
+          <!-- Left Column: Headline & Intro -->
+          <div class="hero-text-col">
+            <div class="hero-tag reveal-element">
+              <span class="hero-tag-accent">$</span>
+              <span class="hero-tag-text">Full Stack PHP/Laravel Developer</span>
+            </div>
+
+            <h1 class="hero-title reveal-element">
+              I build reliable digital products, from
+              <span class="text-accent-gradient">backend systems</span>
+              to mobile apps.
+            </h1>
+
+            <p class="hero-bio reveal-element">
+              Full Stack Engineer architecting scalable Laravel backends, fast APIs, and production Flutter mobile apps.
+            </p>
+
+            <!-- CTAs -->
+            <div class="hero-actions reveal-element">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Projects</span>
+                <svg class="icon-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <span>Contact Me</span>
+              </a>
+            </div>
+
+            <!-- Quick Metadata Badges -->
+            <div class="hero-meta reveal-element">
+              <div class="meta-item">
+                <span class="meta-label">Location:</span>
+                <span class="meta-value">Dhaka, Bangladesh</span>
+              </div>
+              <div class="meta-divider" aria-hidden="true">/</div>
+              <div class="meta-item">
+                <span class="meta-label">Primary Stack:</span>
+                <span class="meta-value">Laravel · PHP · MySQL · Flutter</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Developer Terminal Card & Profile Preview -->
+          <div class="hero-visual-col reveal-element">
+            <div class="terminal-card">
+              <!-- Window Header -->
+              <div class="terminal-header">
+                <div class="terminal-dots" aria-hidden="true">
+                  <span class="dot dot-close"></span>
+                  <span class="dot dot-minimize"></span>
+                  <span class="dot dot-expand"></span>
+                </div>
+                <div class="terminal-title">bash — akib@macbook</div>
+                <div class="terminal-pill">zsh</div>
+              </div>
+
+              <!-- Terminal Body -->
+              <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line">
+                  <span class="t-prompt">$</span>
+                  <span class="t-cmd">whoami</span>
+                </div>
+                <div class="terminal-output t-name">Akib Siddiki</div>
+
+                <div class="terminal-line">
+                  <span class="t-prompt">$</span>
+                  <span class="t-cmd">cat profile.json</span>
+                </div>
+                <div class="terminal-output code-block">
+<span class="t-punct">{</span>
+  <span class="t-key">"role"</span><span class="t-punct">:</span> <span class="t-str">"Full Stack PHP/Laravel Developer"</span><span class="t-punct">,</span>
+  <span class="t-key">"experience"</span><span class="t-punct">:</span> <span class="t-str">"4+ Years at eMythMakers"</span><span class="t-punct">,</span>
+  <span class="t-key">"core_stack"</span><span class="t-punct">:</span> <span class="t-punct">[</span><span class="t-str">"Laravel"</span><span class="t-punct">,</span> <span class="t-str">"PHP"</span><span class="t-punct">,</span> <span class="t-str">"MySQL"</span><span class="t-punct">,</span> <span class="t-str">"Flutter"</span><span class="t-punct">,</span> <span class="t-str">"Redis"</span><span class="t-punct">],</span>
+  <span class="t-key">"focus"</span><span class="t-punct">:</span> <span class="t-str">"Scalable APIs & Database Performance"</span><span class="t-punct">,</span>
+  <span class="t-key">"status"</span><span class="t-punct">:</span> <span class="t-accent">"open_for_opportunities"</span>
+<span class="t-punct">}</span></div>
+
+                <div class="terminal-line active-line">
+                  <span class="t-prompt">$</span>
+                  <span class="t-typed" id="typed-command">explore --experience</span>
+                  <span class="terminal-cursor"></span>
+                </div>
+              </div>
+
+              <!-- Mini Profile Overlay Bar -->
+              <div class="terminal-footer">
+                <div class="mini-profile">
+                  <img src="assets/images/me.png" alt="Akib Siddiki" class="mini-avatar" width="44" height="44" loading="eager">
+                  <div class="mini-profile-text">
+                    <span class="mini-name">Akib Siddiki</span>
+                    <span class="mini-role">Software Engineer</span>
+                  </div>
+                </div>
+                <a href="#about" class="terminal-scroll-hint" aria-label="Scroll to about section">
+                  <span>Learn more</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                    <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         3. ABOUT
+         ================================================== -->
+    <section class="about-section section-block" id="about">
+      <div class="container">
+
+        <!-- Mubx-Inspired Top Stats Strip -->
+        <div class="stats-strip reveal-element">
+          <div class="stat-strip-item">
+            <div class="stat-strip-number">15+</div>
+            <div class="stat-strip-label">Projects Shipped</div>
+          </div>
+          <div class="stat-strip-item">
+            <div class="stat-strip-number">4+</div>
+            <div class="stat-strip-label">Years Coding</div>
+          </div>
+          <div class="stat-strip-item">
+            <div class="stat-strip-number">&lt;10ms</div>
+            <div class="stat-strip-label">Avg Cache Latency</div>
+          </div>
+          <div class="stat-strip-item">
+            <div class="stat-strip-number">100%</div>
+            <div class="stat-strip-label">Production Reliability</div>
+          </div>
+        </div>
+
+        <!-- Section Header exactly matching screenshot -->
+        <div class="about-header-block reveal-element">
+          <div class="section-kicker">// ABOUT ME</div>
+          <h2 class="about-mubx-title">
+            The person behind<br>
+            <span class="text-accent">the terminal.</span>
+          </h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Professional Narrative -->
+          <div class="about-left reveal-element">
+            <div class="about-narrative">
+              <p class="lead-p">
+                Full Stack Engineer based in Dhaka, architecting high-scale backends, APIs, and mobile applications at <strong>eMythMakers</strong>.
+              </p>
+              <p>
+                I specialize in modular Laravel systems, optimized MySQL databases, and cross-platform Flutter apps—powering real-time platforms like <em>bdnews24</em> and <em>Samakal</em> that serve hundreds of thousands of daily users.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: High-Res Portrait Card -->
+          <div class="about-right reveal-element">
+            <div class="about-image-card">
+              <img src="assets/images/me.png" alt="Akib Siddiki - Professional Software Engineer" class="about-avatar" width="1024" height="1024" loading="lazy">
+              <div class="image-overlay-badge">
+                <span class="badge-role">Full Stack Developer</span>
+                <span class="badge-location">Dhaka, Bangladesh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Pillars Row exactly matching screenshot -->
+        <div class="pillars-grid reveal-element">
+          <div class="pillar-card">
+            <div class="pillar-label">// THE WHY</div>
+            <h3 class="pillar-title">Why I Code</h3>
+            <p class="pillar-desc">
+              Turning complex business requirements into fast, reliable software that users trust.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-label">// HOW I THINK</div>
+            <h3 class="pillar-title">How I Think</h3>
+            <p class="pillar-desc">
+              Database integrity and sub-second response times come first. Clean architecture beats quick hacks.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-label">// BEYOND CODE</div>
+            <h3 class="pillar-title">Beyond Code</h3>
+            <p class="pillar-desc">
+              Profiling database queries, studying distributed cache patterns, and refining software craft.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================
+         4. EXPERIENCE (CAREER TIMELINE)
+         ================================================== -->
+    <section class="experience-section section-block" id="experience">
+      <div class="container">
+        <div class="section-kicker reveal-element">// 02 — CAREER MILESTONES</div>
+        <div class="section-intro reveal-element">
+          <h2 class="section-heading">Professional Experience</h2>
+          <p class="section-subheading">A timeline of software engineering roles, production deliveries, and academic foundation.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-spine" aria-hidden="true"></div>
+
+          <!-- Item 1: Software Engineer -->
+          <div class="timeline-item reveal-element">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-inner"></span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-badge current">Current Role</span>
+                <span class="timeline-period">2023 — Present</span>
+              </div>
+              <h3 class="timeline-role">Software Engineer</h3>
+              <div class="timeline-company">eMythMakers.com · Dhaka, Bangladesh</div>
+              <p class="timeline-summary">
+                Lead backend engineer architecting and maintaining high-traffic news portals, enterprise CMS, and e-commerce platforms.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Architect scalable web applications with <strong>Laravel</strong> and <strong>PHP 8+</strong>.</li>
+                <li>Design optimized <strong>MySQL</strong> schemas, composite indexes, and <strong>Redis</strong> caching layers.</li>
+                <li>Build high-throughput <strong>RESTful APIs</strong> for web clients and cross-platform <strong>Flutter</strong> mobile apps.</li>
+                <li>Integrate <strong>AWS S3</strong> media storage and <strong>Firebase FCM</strong> real-time notifications.</li>
+              </ul>
+              <div class="timeline-tech-tags">
+                <span class="tag">Laravel</span>
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Redis</span>
+                <span class="tag">RESTful APIs</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">AWS S3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Junior Software Engineer -->
+          <div class="timeline-item reveal-element">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-inner"></span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-badge">Previous Role</span>
+                <span class="timeline-period">2022 — 2023</span>
+              </div>
+              <h3 class="timeline-role">Junior Software Engineer</h3>
+              <div class="timeline-company">eMythMakers.com · Dhaka, Bangladesh</div>
+              <p class="timeline-summary">
+                Contributed to backend features, admin control dashboards, and database query optimization.
+              </p>
+              <ul class="timeline-bullets">
+                <li>Built admin control panels, CRUD interfaces, and custom CMS modules using <strong>PHP</strong> and <strong>MySQL</strong>.</li>
+                <li>Optimized legacy database queries to eliminate N+1 bottlenecks and improve application throughput.</li>
+                <li>Collaborated with teams to ship responsive UI layouts and resolve production bugs.</li>
+              </ul>
+              <div class="timeline-tech-tags">
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Bootstrap</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML5/CSS3</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Education - B.Sc -->
+          <div class="timeline-item reveal-element">
+            <div class="timeline-node edu-node" aria-hidden="true">
+              <span class="node-inner"></span>
+            </div>
+            <div class="timeline-card edu-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-badge edu">B.Sc. Degree</span>
+                <span class="timeline-period">2018 — 2021</span>
+              </div>
+              <h3 class="timeline-role">B.Sc. in Computer Science & Engineering</h3>
+              <div class="timeline-company">Eastern University · Dhaka, Bangladesh</div>
+              <p class="timeline-summary">
+                Four-year coursework in algorithms, data structures, relational databases (RDBMS), and software architecture.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4: Education - Diploma -->
+          <div class="timeline-item reveal-element">
+            <div class="timeline-node edu-node" aria-hidden="true">
+              <span class="node-inner"></span>
+            </div>
+            <div class="timeline-card edu-card">
+              <div class="timeline-badge-row">
+                <span class="timeline-badge edu">Diploma</span>
+                <span class="timeline-period">2012 — 2017</span>
+              </div>
+              <h3 class="timeline-role">Diploma in Telecommunication Technology</h3>
+              <div class="timeline-company">Tangail Polytechnic Institute · Tangail, Bangladesh</div>
+              <p class="timeline-summary">
+                Foundational technical coursework in telecommunications, digital electronics, microprocessors, and computer networks.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         5. TECH STACK
+         ================================================== -->
+    <section class="stack-section section-block" id="tech-stack">
+      <div class="container">
+        <div class="section-kicker reveal-element">// 03 — TOOLS OF THE TRADE</div>
+        <div class="section-intro reveal-element">
+          <h2 class="section-heading">Technology & Capabilities</h2>
+          <p class="section-subheading">Core technologies and development tools deployed in production.</p>
+        </div>
+
+        <div class="stack-categories-container">
+
+          <!-- Category 1: Backend & Core -->
+          <div class="stack-category-card reveal-element">
+            <div class="category-header">
+              <div class="cat-number">01</div>
+              <div class="cat-meta">
+                <h3 class="cat-title">BACKEND & CORE</h3>
+                <p class="cat-desc">// server architecture &amp; APIs</p>
+              </div>
+            </div>
+            <div class="tech-grid">
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M6.3 7.8c-.8 0-1.5.3-2 .8-.5.5-.7 1.3-.7 2.1 0 1 .3 1.8.8 2.3.5.5 1.2.8 2 .8.8 0 1.5-.3 2-.8.5-.5.7-1.3.7-2.1 0-1-.3-1.8-.8-2.3-.5-.6-1.2-.9-2-.9zm-.1 4.5c-.3 0-.5-.1-.7-.3-.2-.2-.3-.5-.3-.9 0-.5.1-.9.3-1.1.2-.3.4-.4.8-.4.3 0 .5.1.7.3.2.2.3.5.3.9 0 .5-.1.9-.3 1.1-.3.3-.5.4-.8.4zm9.4-4.5c-.8 0-1.5.3-2 .8-.5.5-.7 1.3-.7 2.1 0 1 .3 1.8.8 2.3.5.5 1.2.8 2 .8.8 0 1.5-.3 2-.8.5-.5.7-1.3.7-2.1 0-1-.3-1.8-.8-2.3-.5-.6-1.2-.9-2-.9zm-.1 4.5c-.3 0-.5-.1-.7-.3-.2-.2-.3-.5-.3-.9 0-.5.1-.9.3-1.1.2-.3.4-.4.8-.4.3 0 .5.1.7.3.2.2.3.5.3.9 0 .5-.1.9-.3 1.1-.3.3-.5.4-.8.4zM24 12c0 6.6-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0s12 5.4 12 12zm-12.7.9c.1-.7.2-1.3.2-1.8 0-.9-.2-1.6-.7-2.1-.5-.5-1.2-.7-2.1-.7H4.3l-1.9 8.2h2.2l.6-2.5h1.9c.8 0 1.5-.2 2.1-.6.7-.5 1.1-1.1 1.4-1.9zm4.2-.9c.1-.7.2-1.3.2-1.8 0-.9-.2-1.6-.7-2.1-.5-.5-1.2-.7-2.1-.7h-4.4l-1.9 8.2h2.2l.6-2.5h1.9c.8 0 1.5-.2 2.1-.6.7-.5 1.1-1.1 1.4-1.9z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">PHP 8+</div>
+                  <div class="tech-role">OOP, Strict Typing &amp; Modern Standards</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M22.955 6.012c-.086-.188-.238-.34-.426-.426l-6.84-3.136a1.18 1.18 0 0 0-1.077.067l-3.322 2.05-3.322-2.05a1.18 1.18 0 0 0-1.077-.067L.051 5.586a1.164 1.164 0 0 0-.051 2.073l6.84 4.095c.33.198.747.198 1.077 0l2.793-1.674 2.793 1.674c.33.198.747.198 1.077 0l6.84-4.095c.46-.276.626-.874.35-1.334a1.17 1.17 0 0 0-.815-.313zM7.41 10.373L1.92 7.086l5.49-3.287 5.49 3.287-5.49 3.287zm9.18 0l-5.49-3.287 5.49-3.287 5.49 3.287-5.49 3.287zM11.96 15.657l-5.49-3.287 5.49-3.287 5.49 3.287-5.49 3.287zm0 6.572l-5.49-3.287 5.49-3.287 5.49 3.287-5.49 3.287z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">Laravel</div>
+                  <div class="tech-role">Framework, Eloquent ORM &amp; Queues</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">RESTful APIs</div>
+                  <div class="tech-role">Contract Design &amp; Sanctum Auth</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M4 6h16V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">MVC Architecture</div>
+                  <div class="tech-role">Modular Design &amp; Service Patterns</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Database & Caching -->
+          <div class="stack-category-card reveal-element">
+            <div class="category-header">
+              <div class="cat-number">02</div>
+              <div class="cat-meta">
+                <h3 class="cat-title">DATABASE & CACHING</h3>
+                <p class="cat-desc">// data integrity &amp; cache</p>
+              </div>
+            </div>
+            <div class="tech-grid">
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2zm6 5.5c-.8.44-2.16.89-3.79 1.14-.68.11-1.42.19-2.21.19s-1.53-.08-2.21-.19C8.16 11.39 6.8 10.94 6 10.5V8.87C7.36 9.57 9.51 10 12 10s4.64-.43 6-1.13v1.63zm0 4.5c-.8.44-2.16.89-3.79 1.14-.68.11-1.42.19-2.21.19s-1.53-.08-2.21-.19C8.16 15.89 6.8 15.44 6 15v-1.63c1.36.7 3.51 1.13 6 1.13s4.64-.43 6-1.13V15zm0 2.5V19c0 .5-2.13 2-6 2s-6-1.5-6-2v-1.5c1.36.7 3.51 1.13 6 1.13s4.64-.43 6-1.13z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">MySQL</div>
+                  <div class="tech-role">Normalization, Indexing &amp; Queries</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zm0 7.76L4.54 7 12 3.24 19.46 7 12 9.76zM2 17l10 5 10-5v-3l-10 5-10-5v3zm0-5l10 5 10-5v-3l-10 5-10-5v3z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">Redis Caching</div>
+                  <div class="tech-role">In-Memory Store &amp; Fast Lookups</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Mobile Development -->
+          <div class="stack-category-card reveal-element">
+            <div class="category-header">
+              <div class="cat-number">03</div>
+              <div class="cat-meta">
+                <h3 class="cat-title">MOBILE DEVELOPMENT</h3>
+                <p class="cat-desc">// iOS &amp; Android mobile apps</p>
+              </div>
+            </div>
+            <div class="tech-grid">
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M14.314 0L2.3 12 6 15.7 21.684 0h-7.37zM6 19.4l3.69 3.69L21.684 11.1H14.31L6 19.4zM9.69 15.71L14.31 11.1l4.62 4.61-4.62 4.61-4.62-4.61z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">Flutter</div>
+                  <div class="tech-role">Cross-Platform UI &amp; State Management</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M4.12 11.45L12.55 3 21 11.45l-4.22 8.48H7.22zM12.55 5.83l-5.6 5.6 2.05 4.12h7.1l2.05-4.12z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">Dart</div>
+                  <div class="tech-role">Async Streams &amp; Strong Typing</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M3.89 15.672L6.255.461A.54.54 0 0 1 7.27.28l3.543 6.64-6.923 8.752zm15.798 4.417l-1.99-12.28a.54.54 0 0 0-.916-.279L3.43 20.354l8.038 4.516a1.08 1.08 0 0 0 1.05 0l7.17-4.781zM14.07 8.718l-2.072-3.957a.54.54 0 0 0-.958 0L2.73 19.78l11.34-11.062z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">Firebase FCM</div>
+                  <div class="tech-role">Cloud Messaging &amp; Push Notifications</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Frontend & Styling -->
+          <div class="stack-category-card reveal-element">
+            <div class="category-header">
+              <div class="cat-number">04</div>
+              <div class="cat-meta">
+                <h3 class="cat-title">FRONTEND & STYLING</h3>
+                <p class="cat-desc">// client interfaces &amp; UI</p>
+              </div>
+            </div>
+            <div class="tech-grid">
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 3h18v18H3V3zm11.5 13.5v-1.8c0-.7-.4-1.2-1.1-1.2-.5 0-.9.2-1.2.6v2.4h-2V10h2v.9c.5-.7 1.2-1.1 2.2-1.1 1.6 0 2.1 1.1 2.1 2.7v4zm-7-1.7c.3.2.7.3 1.1.3.6 0 1-.2 1-.7 0-.5-.4-.7-1-.9l-.4-.1c-1.1-.3-1.6-.9-1.6-1.8 0-1.2 1-2 2.4-2 .7 0 1.2.2 1.6.4l-.5 1.5c-.3-.2-.6-.3-1-.3-.6 0-.9.3-.9.6 0 .4.3.6.8.8l.4.1c1.2.4 1.8.9 1.8 1.9 0 1.3-1.1 2.1-2.6 2.1-.8 0-1.4-.2-1.9-.5l.7-1.5z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">JavaScript (ES6+)</div>
+                  <div class="tech-role">DOM Manipulation &amp; Async Fetch</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">Tailwind CSS</div>
+                  <div class="tech-role">Utility-First Styling &amp; Layouts</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M4.5 3h15a1.5 1.5 0 0 1 1.5 1.5v15a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5v-15A1.5 1.5 0 0 1 4.5 3zm4.2 4.5v9h3.6c1.8 0 2.8-.8 2.8-2.2 0-.9-.5-1.6-1.3-1.8.6-.2 1-.9 1-1.7 0-1.4-1-2.1-2.7-2.1H8.7v-1.2zm2.1 3.5h1.2c.6 0 .9.3.9.8s-.3.8-.9.8h-1.2V11zm0 3.3h1.4c.7 0 1 .3 1 .9s-.3.9-1 .9h-1.4v-1.8z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">Bootstrap</div>
+                  <div class="tech-role">Admin UI &amp; Dashboard Layouts</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2L2 5v14l10 3 10-3V5L12 2zm0 2.2l7.7 2.3-1.3 9.6-6.4 1.9-6.4-1.9-1.3-9.6L12 4.2z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">HTML5 / CSS3</div>
+                  <div class="tech-role">Semantic HTML, Flexbox &amp; Grid</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Tools & Infrastructure -->
+          <div class="stack-category-card reveal-element">
+            <div class="category-header">
+              <div class="cat-number">05</div>
+              <div class="cat-meta">
+                <h3 class="cat-title">TOOLS & INFRASTRUCTURE</h3>
+                <p class="cat-desc">// DevOps &amp; toolchain</p>
+              </div>
+            </div>
+            <div class="tech-grid">
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">Git & GitHub</div>
+                  <div class="tech-role">Version Control &amp; Code Reviews</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185zm-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.186.185.186zm0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.186.185.186zm-2.954 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H8.075a.185.185 0 0 0-.185.185v1.888c0 .102.083.186.185.186zm0 2.714h2.119a.186.186 0 0 0 .185-.185V9.006a.185.185 0 0 0-.185-.186H8.075a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185zm-2.955 0h2.119a.186.186 0 0 0 .185-.185V9.006a.185.185 0 0 0-.185-.186H5.12a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185zm14.773 1.886c-.45-.298-.958-.446-1.52-.446H18.4v-.825a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.186v.825H3.14a.185.185 0 0 0-.185.186c-.035 1.582.35 3.064 1.157 4.444 1.258 2.155 3.385 3.518 6.012 3.864 1.08.143 2.184.143 3.264 0 2.627-.346 4.754-1.709 6.012-3.864.717-1.229 1.106-2.535 1.168-3.92-.008-.094-.28-.172-.47-.264z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">Docker</div>
+                  <div class="tech-role">Containers &amp; Environment Parity</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">AWS S3</div>
+                  <div class="tech-role">Cloud Storage &amp; Asset Delivery</div>
+                </div>
+              </div>
+
+              <div class="tech-item" tabindex="0">
+                <div class="tech-icon-box">
+                  <svg class="tech-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+                  </svg>
+                </div>
+                <div class="tech-text">
+                  <div class="tech-name">Postman & Linux</div>
+                  <div class="tech-role">API Testing &amp; Shell Automation</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         6. FEATURED PROJECTS
+         ================================================== -->
+    <section class="projects-section section-block" id="projects">
+      <div class="container">
+        <div class="section-kicker reveal-element">// 04 — SELECTED WORK</div>
+        <div class="section-intro reveal-element">
+          <h2 class="section-heading">Featured Production Projects</h2>
+          <p class="section-subheading">Production platforms, mobile apps, and enterprise systems built for real-world scale.</p>
+        </div>
+
+        <div class="projects-list">
+
+          <!-- PROJECT 01: bdnews24 Flutter Application -->
+          <article class="project-card reveal-element" data-project="01">
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-number">01</span>
+                <span class="project-category">MOBILE APP · NEWS ECOSYSTEM</span>
+              </div>
+              <h3 class="project-title">bdnews24 Mobile Application</h3>
+              <p class="project-description">
+                Official 24/7 news app for Bangladesh's pioneer digital portal. Built with Flutter and Laravel REST APIs, featuring sub-second push notifications via Firebase FCM and offline SQLite caching.
+              </p>
+              <div class="project-tech-stack">
+                <span class="p-tech">Flutter</span>
+                <span class="p-tech">Dart</span>
+                <span class="p-tech">Laravel REST API</span>
+                <span class="p-tech">Firebase FCM</span>
+                <span class="p-tech">SQLite</span>
+                <span class="p-tech">Offline Caching</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://akibsiddiki.github.io/AkibSiddiki/" target="_blank" rel="noopener noreferrer" class="project-link primary-link">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2.5 11.5L11.5 2.5M11.5 2.5H4M11.5 2.5V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/AkibSiddiki" target="_blank" rel="noopener noreferrer" class="project-link secondary-link">
+                  <span>GitHub Profile →</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Tasteful Abstract Architectural Illustration -->
+            <div class="project-visual" aria-label="bdnews24 Architecture Preview">
+              <div class="tech-canvas-mockup">
+                <div class="mockup-bar">
+                  <span class="m-dot red"></span>
+                  <span class="m-dot yellow"></span>
+                  <span class="m-dot green"></span>
+                  <span class="m-title">bdnews24_app_architecture.dart</span>
+                </div>
+                <div class="mockup-code">
+                  <div class="code-line"><span class="c-key">class</span> <span class="c-cls">NewsRepository</span> {</div>
+                  <div class="code-line indent-1"><span class="c-key">final</span> <span class="c-cls">ApiClient</span> _client;</div>
+                  <div class="code-line indent-1"><span class="c-key">final</span> <span class="c-cls">LocalCache</span> _cache;</div>
+                  <div class="code-line indent-1"><span class="c-key">Future</span>&lt;<span class="c-cls">List</span>&lt;<span class="c-cls">Article</span>&gt;&gt; <span class="c-fn">fetchHeadlines</span>() <span class="c-key">async</span> {</div>
+                  <div class="code-line indent-2"><span class="c-key">if</span> (<span class="c-key">await</span> _network.<span class="c-fn">isOffline</span>()) {</div>
+                  <div class="code-line indent-3"><span class="c-key">return</span> _cache.<span class="c-fn">getCachedHeadlines</span>();</div>
+                  <div class="code-line indent-2">}</div>
+                  <div class="code-line indent-2"><span class="c-key">final</span> res = <span class="c-key">await</span> _client.<span class="c-fn">get</span>(<span class="c-str">'/api/v1/news/breaking'</span>);</div>
+                  <div class="code-line indent-2"><span class="c-key">return</span> _cache.<span class="c-fn">saveAndEmit</span>(res.<span class="c-fn">toModels</span>());</div>
+                  <div class="code-line indent-1">}</div>
+                  <div class="code-line">}</div>
+                </div>
+                <div class="mockup-status-badge">
+                  <span class="status-live-dot"></span> 24/7 LIVE STREAMING API
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: Samakal News Portal & Publishing Platform -->
+          <article class="project-card reveal-element" data-project="02">
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-number">02</span>
+                <span class="project-category">HIGH-TRAFFIC MEDIA · CMS</span>
+              </div>
+              <h3 class="project-title">Samakal Digital News Publishing Platform</h3>
+              <p class="project-description">
+                High-traffic publishing platform for a leading national daily. Engineered with Laravel and Redis to absorb severe breaking-news traffic surges with sub-10ms response times.
+              </p>
+              <div class="project-tech-stack">
+                <span class="p-tech">Laravel</span>
+                <span class="p-tech">PHP 8</span>
+                <span class="p-tech">MySQL</span>
+                <span class="p-tech">Redis Caching</span>
+                <span class="p-tech">Tailwind CSS</span>
+                <span class="p-tech">RESTful API</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://akibsiddiki.github.io/AkibSiddiki/" target="_blank" rel="noopener noreferrer" class="project-link primary-link">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2.5 11.5L11.5 2.5M11.5 2.5H4M11.5 2.5V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/AkibSiddiki" target="_blank" rel="noopener noreferrer" class="project-link secondary-link">
+                  <span>GitHub Profile →</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Tasteful Abstract Architectural Illustration -->
+            <div class="project-visual" aria-label="Samakal Architecture Preview">
+              <div class="tech-canvas-mockup">
+                <div class="mockup-bar">
+                  <span class="m-dot red"></span>
+                  <span class="m-dot yellow"></span>
+                  <span class="m-dot green"></span>
+                  <span class="m-title">ArticleController.php [Redis Cache Layer]</span>
+                </div>
+                <div class="mockup-code">
+                  <div class="code-line"><span class="c-key">public function</span> <span class="c-fn">show</span>(string <span class="c-var">$slug</span>): <span class="c-cls">JsonResponse</span></div>
+                  <div class="code-line">{</div>
+                  <div class="code-line indent-1"><span class="c-var">$cacheKey</span> = <span class="c-str">"article:slug:{$slug}"</span>;</div>
+                  <div class="code-line indent-1"><span class="c-var">$article</span> = <span class="c-cls">Cache</span>::<span class="c-fn">remember</span>(<span class="c-var">$cacheKey</span>, <span class="c-num">3600</span>, <span class="c-key">function</span> () <span class="c-key">use</span> (<span class="c-var">$slug</span>) {</div>
+                  <div class="code-line indent-2"><span class="c-key">return</span> <span class="c-cls">Article</span>::<span class="c-fn">where</span>(<span class="c-str">'slug'</span>, <span class="c-var">$slug</span>)</div>
+                  <div class="code-line indent-3">-&gt;<span class="c-fn">with</span>([<span class="c-str">'category'</span>, <span class="c-str">'tags'</span>, <span class="c-str">'author'</span>])</div>
+                  <div class="code-line indent-3">-&gt;<span class="c-fn">published</span>()</div>
+                  <div class="code-line indent-3">-&gt;<span class="c-fn">firstOrFail</span>();</div>
+                  <div class="code-line indent-1">});</div>
+                  <div class="code-line indent-1"><span class="c-key">return</span> response()-&gt;<span class="c-fn">json</span>(<span class="c-var">$article</span>);</div>
+                  <div class="code-line">}</div>
+                </div>
+                <div class="mockup-status-badge">
+                  <span class="status-live-dot"></span> SUB-10MS CACHE HIT RESPONSE
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: Step Footwear E-Commerce Platform -->
+          <article class="project-card reveal-element" data-project="03">
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-number">03</span>
+                <span class="project-category">E-COMMERCE · INVENTORY</span>
+              </div>
+              <h3 class="project-title">Step Footwear E-Commerce & Inventory Hub</h3>
+              <p class="project-description">
+                Commercial footwear store and inventory engine with multi-variant SKU handling, atomic database transactions, and secure online payment checkout.
+              </p>
+              <div class="project-tech-stack">
+                <span class="p-tech">Laravel</span>
+                <span class="p-tech">PHP</span>
+                <span class="p-tech">MySQL</span>
+                <span class="p-tech">Payment Gateway API</span>
+                <span class="p-tech">JavaScript</span>
+                <span class="p-tech">Bootstrap</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://akibsiddiki.github.io/AkibSiddiki/" target="_blank" rel="noopener noreferrer" class="project-link primary-link">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2.5 11.5L11.5 2.5M11.5 2.5H4M11.5 2.5V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/AkibSiddiki" target="_blank" rel="noopener noreferrer" class="project-link secondary-link">
+                  <span>GitHub Profile →</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Tasteful Abstract Architectural Illustration -->
+            <div class="project-visual" aria-label="Step Footwear Architecture Preview">
+              <div class="tech-canvas-mockup">
+                <div class="mockup-bar">
+                  <span class="m-dot red"></span>
+                  <span class="m-dot yellow"></span>
+                  <span class="m-dot green"></span>
+                  <span class="m-title">OrderFulfillmentPipeline.php</span>
+                </div>
+                <div class="mockup-code">
+                  <div class="code-line"><span class="c-cls">DB</span>::<span class="c-fn">transaction</span>(<span class="c-key">function</span> () <span class="c-key">use</span> (<span class="c-var">$order</span>, <span class="c-var">$cart</span>) {</div>
+                  <div class="code-line indent-1"><span class="c-key">foreach</span> (<span class="c-var">$cart</span>-&gt;items <span class="c-key">as</span> <span class="c-var">$item</span>) {</div>
+                  <div class="code-line indent-2"><span class="c-var">$sku</span> = <span class="c-cls">Variant</span>::<span class="c-fn">lockForUpdate</span>()-&gt;<span class="c-fn">findOrFail</span>(<span class="c-var">$item</span>-&gt;id);</div>
+                  <div class="code-line indent-2"><span class="c-cls">Ensure</span>::<span class="c-fn">hasSufficientStock</span>(<span class="c-var">$sku</span>, <span class="c-var">$item</span>-&gt;qty);</div>
+                  <div class="code-line indent-2"><span class="c-var">$sku</span>-&gt;<span class="c-fn">decrementStock</span>(<span class="c-var">$item</span>-&gt;qty);</div>
+                  <div class="code-line indent-1">}</div>
+                  <div class="code-line indent-1"><span class="c-var">$order</span>-&gt;<span class="c-fn">markPaid</span>();</div>
+                  <div class="code-line indent-1"><span class="c-cls">Event</span>::<span class="c-fn">dispatch</span>(<span class="c-key">new</span> <span class="c-cls">OrderConfirmed</span>(<span class="c-var">$order</span>));</div>
+                  <div class="code-line">});</div>
+                </div>
+                <div class="mockup-status-badge">
+                  <span class="status-live-dot"></span> ATOMIC TRANSACTION VERIFIED
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 04: Enterprise HRM & Workforce Management System -->
+          <article class="project-card reveal-element" data-project="04">
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-number">04</span>
+                <span class="project-category">ENTERPRISE SYSTEM · SAAS</span>
+              </div>
+              <h3 class="project-title">Enterprise HRM & Workforce Management System</h3>
+              <p class="project-description">
+                Human Resource Management system featuring Role-Based Access Control (RBAC), automated biometric attendance sync, and dynamic payroll calculations.
+              </p>
+              <div class="project-tech-stack">
+                <span class="p-tech">Laravel</span>
+                <span class="p-tech">PHP</span>
+                <span class="p-tech">MySQL</span>
+                <span class="p-tech">RBAC</span>
+                <span class="p-tech">Automated Payroll</span>
+                <span class="p-tech">REST APIs</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://akibsiddiki.github.io/AkibSiddiki/" target="_blank" rel="noopener noreferrer" class="project-link primary-link">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2.5 11.5L11.5 2.5M11.5 2.5H4M11.5 2.5V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/AkibSiddiki" target="_blank" rel="noopener noreferrer" class="project-link secondary-link">
+                  <span>GitHub Profile →</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Tasteful Abstract Architectural Illustration -->
+            <div class="project-visual" aria-label="HRM Architecture Preview">
+              <div class="tech-canvas-mockup">
+                <div class="mockup-bar">
+                  <span class="m-dot red"></span>
+                  <span class="m-dot yellow"></span>
+                  <span class="m-dot green"></span>
+                  <span class="m-title">PayrollEngine.php [RBAC & Calculations]</span>
+                </div>
+                <div class="mockup-code">
+                  <div class="code-line"><span class="c-key">public function</span> <span class="c-fn">calculateMonthlySalary</span>(<span class="c-cls">Employee</span> <span class="c-var">$emp</span>): <span class="c-cls">Payslip</span></div>
+                  <div class="code-line">{</div>
+                  <div class="code-line indent-1"><span class="c-var">$attendance</span> = <span class="c-var">$emp</span>-&gt;attendances()-&gt;<span class="c-fn">inCurrentBillingCycle</span>();</div>
+                  <div class="code-line indent-1"><span class="c-var">$gross</span> = <span class="c-var">$emp</span>-&gt;structure-&gt;basic + <span class="c-var">$emp</span>-&gt;structure-&gt;allowances;</div>
+                  <div class="code-line indent-1"><span class="c-var">$deductions</span> = <span class="c-cls">TaxEngine</span>::<span class="c-fn">compute</span>(<span class="c-var">$gross</span>, <span class="c-var">$emp</span>-&gt;tier);</div>
+                  <div class="code-line indent-1"><span class="c-key">return</span> <span class="c-cls">Payslip</span>::<span class="c-fn">create</span>([</div>
+                  <div class="code-line indent-2"><span class="c-str">'employee_id'</span> =&gt; <span class="c-var">$emp</span>-&gt;id,</div>
+                  <div class="code-line indent-2"><span class="c-str">'net_payable'</span> =&gt; <span class="c-var">$gross</span> - <span class="c-var">$deductions</span> - <span class="c-var">$attendance</span>-&gt;unpaidLoss(),</div>
+                  <div class="code-line indent-1">]);</div>
+                  <div class="code-line">}</div>
+                </div>
+                <div class="mockup-status-badge">
+                  <span class="status-live-dot"></span> MULTI-TIER RBAC SECURED
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 05: eMythMakers Dynamic CMS Engine -->
+          <article class="project-card reveal-element" data-project="05">
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-number">05</span>
+                <span class="project-category">CUSTOM CMS · CORE INFRASTRUCTURE</span>
+              </div>
+              <h3 class="project-title">eMythMakers Dynamic CMS & Publishing Framework</h3>
+              <p class="project-description">
+                Headless content engine with dynamic layout builders, automated image optimization via AWS S3, and high-throughput REST endpoints.
+              </p>
+              <div class="project-tech-stack">
+                <span class="p-tech">Laravel</span>
+                <span class="p-tech">PHP</span>
+                <span class="p-tech">MySQL</span>
+                <span class="p-tech">RESTful APIs</span>
+                <span class="p-tech">AWS S3</span>
+                <span class="p-tech">JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://akibsiddiki.github.io/AkibSiddiki/" target="_blank" rel="noopener noreferrer" class="project-link primary-link">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2.5 11.5L11.5 2.5M11.5 2.5H4M11.5 2.5V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/AkibSiddiki" target="_blank" rel="noopener noreferrer" class="project-link secondary-link">
+                  <span>GitHub Profile →</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Tasteful Abstract Architectural Illustration -->
+            <div class="project-visual" aria-label="CMS Architecture Preview">
+              <div class="tech-canvas-mockup">
+                <div class="mockup-bar">
+                  <span class="m-dot red"></span>
+                  <span class="m-dot yellow"></span>
+                  <span class="m-dot green"></span>
+                  <span class="m-title">HeadlessContentEndpoint.php</span>
+                </div>
+                <div class="mockup-code">
+                  <div class="code-line"><span class="c-key">public function</span> <span class="c-fn">renderSchema</span>(string <span class="c-var">$pageUri</span>): <span class="c-cls">SchemaResource</span></div>
+                  <div class="code-line">{</div>
+                  <div class="code-line indent-1"><span class="c-var">$layout</span> = <span class="c-cls">LayoutRegistry</span>::<span class="c-fn">resolveByUri</span>(<span class="c-var">$pageUri</span>);</div>
+                  <div class="code-line indent-1"><span class="c-key">return</span> <span class="c-key">new</span> <span class="c-cls">SchemaResource</span>([</div>
+                  <div class="code-line indent-2"><span class="c-str">'meta'</span> =&gt; <span class="c-var">$layout</span>-&gt;<span class="c-fn">seoTags</span>(),</div>
+                  <div class="code-line indent-2"><span class="c-str">'sections'</span> =&gt; <span class="c-var">$layout</span>-&gt;blocks-&gt;<span class="c-fn">map</span>(<span class="c-key">fn</span>(<span class="c-var">$b</span>) =&gt; <span class="c-var">$b</span>-&gt;<span class="c-fn">compile</span>()),</div>
+                  <div class="code-line indent-2"><span class="c-str">'s3_assets'</span> =&gt; <span class="c-cls">Storage</span>::<span class="c-fn">disk</span>(<span class="c-str">'s3'</span>)-&gt;<span class="c-fn">temporaryUrls</span>(<span class="c-var">$layout</span>-&gt;media),</div>
+                  <div class="code-line indent-1">]);</div>
+                  <div class="code-line">}</div>
+                </div>
+                <div class="mockup-status-badge">
+                  <span class="status-live-dot"></span> DYNAMIC HEADLESS PIPELINE
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         7. WHAT I DO / EXPERTISE
+         ================================================== -->
+    <section class="expertise-section section-block" id="expertise">
+      <div class="container">
+        <div class="section-kicker reveal-element">// 05 — CORE CAPABILITIES</div>
+        <div class="section-intro reveal-element">
+          <h2 class="section-heading">Areas of Engineering Expertise</h2>
+          <p class="section-subheading">From database schemas to high-traffic deployment, here is how I deliver engineering value.</p>
+        </div>
+
+        <div class="expertise-grid">
+          <!-- 01 -->
+          <div class="expertise-card reveal-element">
+            <div class="expertise-num">01</div>
+            <h3 class="expertise-title">Backend Architecture</h3>
+            <p class="expertise-desc">
+              Modular Laravel and PHP applications designed for scalability, maintainability, and clean code standards.
+            </p>
+            <div class="expertise-footer-tags">
+              <span>Laravel</span> · <span>PHP 8</span> · <span>SOLID</span>
+            </div>
+          </div>
+
+          <!-- 02 -->
+          <div class="expertise-card reveal-element">
+            <div class="expertise-num">02</div>
+            <h3 class="expertise-title">Database Architecture &amp; Optimization</h3>
+            <p class="expertise-desc">
+              Relational schema modeling, index optimization, query tuning, and Redis caching layers.
+            </p>
+            <div class="expertise-footer-tags">
+              <span>MySQL</span> · <span>Indexing</span> · <span>Redis</span>
+            </div>
+          </div>
+
+          <!-- 03 -->
+          <div class="expertise-card reveal-element">
+            <div class="expertise-num">03</div>
+            <h3 class="expertise-title">RESTful API Engineering</h3>
+            <p class="expertise-desc">
+              Fast, secure endpoints with token authentication, rate limiting, and defensive request validation.
+            </p>
+            <div class="expertise-footer-tags">
+              <span>Sanctum</span> · <span>JSON API</span> · <span>Postman</span>
+            </div>
+          </div>
+
+          <!-- 04 -->
+          <div class="expertise-card reveal-element">
+            <div class="expertise-num">04</div>
+            <h3 class="expertise-title">Mobile Development (Flutter)</h3>
+            <p class="expertise-desc">
+              Cross-platform iOS and Android apps with smooth UI, local SQLite persistence, and push notifications.
+            </p>
+            <div class="expertise-footer-tags">
+              <span>Flutter</span> · <span>Dart</span> · <span>Firebase FCM</span>
+            </div>
+          </div>
+
+          <!-- 05 -->
+          <div class="expertise-card reveal-element">
+            <div class="expertise-num">05</div>
+            <h3 class="expertise-title">CMS &amp; Enterprise Systems</h3>
+            <p class="expertise-desc">
+              Custom administrative portals, content management platforms, and role-based operational workflows.
+            </p>
+            <div class="expertise-footer-tags">
+              <span>RBAC</span> · <span>Workflows</span> · <span>Admin UI</span>
+            </div>
+          </div>
+
+          <!-- 06 -->
+          <div class="expertise-card reveal-element">
+            <div class="expertise-num">06</div>
+            <h3 class="expertise-title">Performance Tuning &amp; Security</h3>
+            <p class="expertise-desc">
+              Application profiling, bottleneck elimination, and hardening against common OWASP vulnerabilities.
+            </p>
+            <div class="expertise-footer-tags">
+              <span>Profiling</span> · <span>OWASP</span> · <span>Auditing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         8. DEVELOPMENT PHILOSOPHY
+         ================================================== -->
+    <section class="philosophy-section section-block" id="philosophy">
+      <div class="container">
+        <div class="section-kicker reveal-element">// 06 — CORE PRINCIPLES</div>
+
+        <div class="philosophy-header reveal-element">
+          <h2 class="section-heading">How I Approach Software Engineering</h2>
+          <p class="section-subheading">Pragmatic engineering principles formed through production shipping.</p>
+        </div>
+
+        <div class="philosophy-statements">
+          <!-- Quote 1 -->
+          <div class="phil-row reveal-element">
+            <div class="phil-num">01</div>
+            <div class="phil-content">
+              <h3 class="phil-statement">"Simplicity is prerequisite for reliability."</h3>
+              <p class="phil-explanation">
+                Readable, maintainable code always outlives clever, brittle abstractions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quote 2 -->
+          <div class="phil-row reveal-element">
+            <div class="phil-num">02</div>
+            <div class="phil-content">
+              <h3 class="phil-statement">"Database schema design is the bedrock of your application."</h3>
+              <p class="phil-explanation">
+                A properly indexed, normalized relational schema prevents countless performance bottlenecks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quote 3 -->
+          <div class="phil-row reveal-element">
+            <div class="phil-num">03</div>
+            <div class="phil-content">
+              <h3 class="phil-statement">"Performance is an engineering feature, not a decorative polish."</h3>
+              <p class="phil-explanation">
+                Fast response times and lightweight payloads directly enhance user retention.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quote 4 -->
+          <div class="phil-row reveal-element">
+            <div class="phil-num">04</div>
+            <div class="phil-content">
+              <h3 class="phil-statement">"Solve the actual problem. Ship software that delivers utility."</h3>
+              <p class="phil-explanation">
+                Engineering choices should serve business goals, reliability, and user satisfaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         9. CONTACT
+         ================================================== -->
+    <section class="contact-section section-block" id="contact">
+      <div class="container">
+        <div class="section-kicker reveal-element">// 07 — LET'S CONNECT &amp; INITIATE</div>
+
+        <div class="contact-header-block reveal-element">
+          <h2 class="contact-headline">
+            Have a project or engineering role? <br>
+            <span class="text-accent">Let's build something solid together.</span>
+          </h2>
+          <p class="contact-subtext">
+            Available for software engineering roles, contract projects, and technical consultations.
+          </p>
+        </div>
+
+        <div class="contact-layout-grid reveal-element">
+          <!-- Left Column: System HUD & Direct Channels -->
+          <div class="contact-hud-col">
+            <!-- Availability HUD Card -->
+            <div class="hud-status-card">
+              <div class="hud-status-header">
+                <span class="hud-pulse-container" aria-hidden="true">
+                  <span class="hud-pulse-ring"></span>
+                  <span class="hud-pulse-dot"></span>
+                </span>
+                <span class="hud-status-title">STATUS: ACTIVE &amp; AVAILABLE</span>
+              </div>
+              <p class="hud-status-desc">
+                Open for software engineering opportunities, backend systems, and Flutter mobile applications.
+              </p>
+
+              <div class="hud-telemetry-specs">
+                <div class="telemetry-item">
+                  <span class="telemetry-label">RESPONSE_TIME</span>
+                  <span class="telemetry-val text-accent">&lt; 2 Hours</span>
+                </div>
+                <div class="telemetry-item">
+                  <span class="telemetry-label">BASE_LOCATION</span>
+                  <span class="telemetry-val">Dhaka, BD (UTC+6)</span>
+                </div>
+                <div class="telemetry-item">
+                  <span class="telemetry-label">WORK_MODE</span>
+                  <span class="telemetry-val">Remote &amp; Hybrid</span>
+                </div>
+                <div class="telemetry-item">
+                  <span class="telemetry-label">LOCAL_TIME</span>
+                  <span class="telemetry-val font-mono" id="contact-local-clock">--:--:-- BST</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Channel Cards -->
+            <div class="contact-channels-stack">
+              <!-- Email Card -->
+              <div class="channel-card">
+                <div class="channel-icon-box" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-title">DIRECT_EMAIL</span>
+                  <span class="channel-detail" id="email-text">akib.siddiki@gmail.com</span>
+                </div>
+                <div class="channel-actions">
+                  <a href="mailto:akib.siddiki@gmail.com" class="channel-btn" aria-label="Send email to Akib">Send</a>
+                  <button type="button" class="channel-btn copy-btn" id="copy-email-btn" aria-label="Copy email address to clipboard">Copy</button>
+                </div>
+              </div>
+
+              <!-- WhatsApp Card -->
+              <div class="channel-card">
+                <div class="channel-icon-box" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-title">WHATSAPP / CALL</span>
+                  <span class="channel-detail">+880 1778 974170</span>
+                </div>
+                <div class="channel-actions">
+                  <a href="https://wa.me/8801778974170?text=Hi%20Akib%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" rel="noopener noreferrer" class="channel-btn" aria-label="Chat on WhatsApp">Chat</a>
+                  <a href="tel:+8801778974170" class="channel-btn" aria-label="Direct Phone Call">Call</a>
+                </div>
+              </div>
+
+              <!-- LinkedIn Card -->
+              <div class="channel-card">
+                <div class="channel-icon-box" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-title">LINKEDIN_PROFILE</span>
+                  <span class="channel-detail">akib-siddiki-apu</span>
+                </div>
+                <div class="channel-actions">
+                  <a href="https://www.linkedin.com/in/akib-siddiki-apu/" target="_blank" rel="noopener noreferrer" class="channel-btn">Connect</a>
+                </div>
+              </div>
+
+              <!-- GitHub Card -->
+              <div class="channel-card">
+                <div class="channel-icon-box" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-title">GITHUB_REPOSITORIES</span>
+                  <span class="channel-detail">@AkibSiddiki</span>
+                </div>
+                <div class="channel-actions">
+                  <a href="https://github.com/AkibSiddiki" target="_blank" rel="noopener noreferrer" class="channel-btn">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Developer Dispatch Terminal -->
+          <div class="contact-terminal-col">
+            <div class="term-window-card">
+              <!-- Window Chrome -->
+              <div class="term-chrome-bar">
+                <div class="term-dots" aria-hidden="true">
+                  <span class="term-dot term-dot-red"></span>
+                  <span class="term-dot term-dot-yellow"></span>
+                  <span class="term-dot term-dot-green"></span>
+                </div>
+                <div class="term-title font-mono">akib@dispatch: ~/contact_dispatcher.sh</div>
+                <div class="term-mode font-mono">SSH:22 [LIVE]</div>
+              </div>
+
+              <!-- Terminal Interactive Form -->
+              <form class="term-form-body" id="terminal-contact-form" autocomplete="off">
+                <div class="term-intro-comment font-mono">
+                  # Interactive transmission console to Akib Siddiki<br>
+                  # Fill parameters and execute ./dispatch_transmission.sh
+                </div>
+
+                <!-- Input 1: Name -->
+                <div class="term-field-group">
+                  <div class="term-prompt-line font-mono">
+                    <span class="term-user">visitor@client</span>:<span class="term-path">~</span>$&nbsp;<label for="term-sender-name" class="term-command">read -p "Your Name: "</label>
+                  </div>
+                  <input type="text" id="term-sender-name" name="sender_name" class="term-text-input" placeholder="e.g. Alex Mercer" required>
+                </div>
+
+                <!-- Input 2: Email -->
+                <div class="term-field-group">
+                  <div class="term-prompt-line font-mono">
+                    <span class="term-user">visitor@client</span>:<span class="term-path">~</span>$&nbsp;<label for="term-sender-email" class="term-command">read -p "Your Email: "</label>
+                  </div>
+                  <input type="email" id="term-sender-email" name="sender_email" class="term-text-input" placeholder="e.g. alex@company.com" required>
+                </div>
+
+                <!-- Input 3: Project Type -->
+                <div class="term-field-group">
+                  <div class="term-prompt-line font-mono">
+                    <span class="term-user">visitor@client</span>:<span class="term-path">~</span>$&nbsp;<label for="term-project-type" class="term-command">select SERVICE in:</label>
+                  </div>
+                  <select id="term-project-type" name="project_type" class="term-select-input font-mono">
+                    <option value="Laravel / Full-Stack Web Application">1) Laravel Web Application / Backend Architecture</option>
+                    <option value="Flutter Mobile App (iOS & Android)">2) Cross-Platform Mobile App (Flutter &amp; Dart)</option>
+                    <option value="High-Throughput REST APIs & MySQL">3) RESTful API Engineering &amp; DB Optimization</option>
+                    <option value="Software Engineer Full-Time Opportunity">4) Full-Time / Contract Software Engineer Role</option>
+                    <option value="Technical Consultation & Architecture Review">5) Technical Consultation &amp; System Audit</option>
+                    <option value="General Engineering Inquiry">6) Other / General Conversation</option>
+                  </select>
+                </div>
+
+                <!-- Input 4: Message Body -->
+                <div class="term-field-group">
+                  <div class="term-prompt-line font-mono">
+                    <span class="term-user">visitor@client</span>:<span class="term-path">~</span>$&nbsp;<label for="term-message-body" class="term-command">cat &lt;&lt; 'EOF' &gt; message_brief.txt</label>
+                  </div>
+                  <textarea id="term-message-body" name="message_body" class="term-textarea-input font-mono" rows="4" placeholder="Type your message, project goals, timeline, or engineering opportunity..." required></textarea>
+                  <div class="term-eof-indicator font-mono">EOF</div>
+                </div>
+
+                <!-- Action Toolbar -->
+                <div class="term-action-bar">
+                  <button type="submit" class="term-exec-btn" id="term-submit-btn">
+                    <span class="exec-prefix">$</span>
+                    <span class="exec-label">./dispatch_transmission.sh</span>
+                    <span class="exec-arrow">➔</span>
+                  </button>
+
+                  <button type="button" class="term-secondary-btn font-mono" id="term-copy-payload-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                    </svg>
+                    <span>Copy Payload</span>
+                  </button>
+                </div>
+
+                <!-- Terminal Execution Log Screen -->
+                <div class="term-log-screen font-mono" id="term-log-screen" aria-live="polite">
+                  <div class="term-log-row"><span class="log-cursor-dot"></span><span class="log-text text-muted">&gt; System initialized. Awaiting user dispatch command...</span></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================================================
+       10. FOOTER
+       ================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-name">AKIB SIDDIKI</div>
+          <div class="footer-title">Full Stack PHP/Laravel & Flutter Developer</div>
+          <div class="footer-loc font-mono text-xs">// Dhaka, Bangladesh</div>
+        </div>
+
+        <div class="footer-nav">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#tech-stack">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-actions">
+          <div class="local-time-card">
+            <span class="clock-icon" aria-hidden="true">🕒</span>
+            <span class="local-time-label">Dhaka Local Time:</span>
+            <span class="local-time-val" id="dhaka-clock">Loading...</span>
+          </div>
+          <button type="button" class="back-to-top" id="back-to-top-btn" aria-label="Scroll back to top">
+            <span>Back to top</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M7 11V3M3 7l4-4 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; 2026 Akib Siddiki. All rights reserved.
+        </p>
+        <p class="tech-badge">
+          Built with semantic <span class="text-accent">HTML5</span>, modern <span class="text-accent">CSS3</span> & vanilla <span class="text-accent">JavaScript</span>. Zero frameworks.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://github.com/AkibSiddiki" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/akib-siddiki-apu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:akib.siddiki@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
