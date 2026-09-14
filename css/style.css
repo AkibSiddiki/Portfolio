@@ -676,7 +676,7 @@ body {
 }
 
 .section-block {
-  padding-top: clamp(4.5rem, 9vw, 8rem);
+  padding-top: clamp(1.5rem, 3vw, 3rem);
   padding-bottom: clamp(4.5rem, 9vw, 8rem);
   position: relative;
 }
@@ -1258,6 +1258,7 @@ body {
   line-height: 1.12;
   letter-spacing: -0.035em;
   color: var(--text-primary);
+  max-width: 680px;
   margin-bottom: 1.5rem;
 }
 
@@ -1275,33 +1276,6 @@ body {
   gap: 1.25rem;
   margin-bottom: 2.5rem;
   flex-wrap: wrap;
-}
-
-.hero-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  flex-wrap: wrap;
-}
-
-.meta-item {
-  display: flex;
-  gap: 0.35rem;
-}
-
-.meta-label {
-  color: var(--text-muted);
-}
-
-.meta-value {
-  color: var(--text-secondary);
-}
-
-.meta-divider {
-  color: var(--border-medium);
 }
 
 /* ==========================================================================
@@ -3466,7 +3440,14 @@ body {
   }
 
   .project-card {
+    gap: 1.4rem;
     grid-template-columns: 1fr;
+  }
+
+  .project-content,
+  .project-visual,
+  .tech-canvas-mockup {
+    min-width: 0;
   }
 
   .expertise-grid {
@@ -3496,35 +3477,185 @@ body {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section-block {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .section-kicker {
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-heading,
+  .contact-headline {
+    letter-spacing: 0;
+  }
+
+  .site-header {
+    height: var(--header-height);
+  }
+
+  .header-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .brand-logo {
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+  }
+
   .status-indicator-wrapper {
     display: none;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 1.75rem);
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-grid {
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .hero-tag {
+    max-width: 100%;
+    margin-bottom: 1.1rem;
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 11vw, 3.25rem);
+    line-height: 1.04;
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+  }
+
+  .hero-bio {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+    margin-bottom: 0;
   }
 
   .hero-showcase-container {
     max-width: 100%;
   }
 
+  .hero-view-switcher {
+    align-self: flex-start;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-switcher-btn {
+    min-height: 38px;
+  }
+
+  .hero-portrait-showcase {
+    border-radius: 18px;
+    padding: 8px;
+  }
+
+  .hero-portrait-glow {
+    inset: -8px;
+    filter: blur(28px);
+  }
+
   .hero-portrait-frame {
-    height: 420px;
+    height: clamp(300px, 78vw, 380px);
+    border-radius: 14px;
+  }
+
+  .hero-portrait-img {
+    object-position: center 12%;
+  }
+
+  .hero-telemetry-badge {
+    top: 14px;
+    left: 14px;
+  }
+
+  .telemetry-chip {
+    font-size: 0.5625rem;
+    padding: 2px 6px;
   }
 
   .float-badge-status {
-    right: 6px;
-    top: 16px;
-    padding: 6px 10px;
+    display: none;
+  }
+
+  .float-badge-title {
+    font-size: 0.7rem;
+  }
+
+  .float-badge-sub {
+    font-size: 0.6rem;
   }
 
   .float-badge-experience {
-    left: 6px;
-    bottom: 42px;
-    padding: 8px 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 16px;
+    padding: 6px 10px;
+    width: auto;
+    max-width: none;
+    justify-content: flex-start;
+  }
+
+  .float-stack-tags {
+    flex-wrap: wrap;
   }
 
   .float-badge-terminal {
-    bottom: -14px;
-    padding: 6px 14px;
-    font-size: 0.6875rem;
-    max-width: 92%;
+    display: none;
+  }
+
+  .terminal-card {
+    border-radius: var(--radius-md);
+  }
+
+  .terminal-header {
+    gap: 0.75rem;
+  }
+
+  .terminal-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .terminal-body {
+    padding: 1rem;
+    font-size: 0.75rem;
+    overflow-x: auto;
+  }
+
+  .about-mubx-title {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+    letter-spacing: 0;
+  }
+
+  .about-narrative {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .pillars-grid {
@@ -3556,6 +3687,17 @@ body {
 
   .channel-card {
     flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .contact-hud-col,
+  .contact-terminal-col,
+  .hud-status-card,
+  .contact-channels-stack,
+  .term-window-card {
+    min-width: 0;
+    width: 100%;
   }
 
   .channel-actions {
@@ -3579,6 +3721,10 @@ body {
     align-items: flex-start;
   }
 
+  .tech-badge {
+    line-height: 1.6;
+  }
+
   .custom-cursor,
   .cursor-dot {
     display: none !important;
@@ -3586,19 +3732,60 @@ body {
 }
 
 @media (max-width: 480px) {
-  .hero-portrait-frame {
-    height: 360px;
+  .mobile-drawer {
+    justify-content: flex-start;
+    padding: calc(var(--header-height) + 1.5rem) 1.25rem 1.5rem;
+    overflow-y: auto;
   }
 
-  .float-badge-status {
-    right: 2px;
-    top: 10px;
+  .mobile-drawer-content {
+    margin: 0;
+  }
+
+  .mobile-nav-list {
+    gap: 0.95rem;
+  }
+
+  .mobile-nav-link {
+    font-size: 1.25rem;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--header-height) + 1.35rem);
+  }
+
+  .hero-bg-motif {
+    width: 130px;
+    height: 130px;
+    top: 9%;
+    right: -24px;
+  }
+
+  .hero-tag {
+    padding: 0.32rem 0.65rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 12vw, 2.75rem);
+  }
+
+  .hero-portrait-showcase {
+    padding: 6px;
+  }
+
+  .hero-portrait-frame {
+    height: clamp(280px, 88vw, 340px);
+  }
+
+  .hero-telemetry-badge {
+    display: none;
   }
 
   .float-badge-experience {
-    left: 2px;
-    bottom: 34px;
-    padding: 6px 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 0.6rem 0.7rem;
     gap: 8px;
   }
 
@@ -3615,9 +3802,17 @@ body {
     font-size: 0.6875rem;
   }
 
-  .hero-telemetry-badge {
-    top: 14px;
-    left: 14px;
+  .stack-mini-pill {
+    font-size: 0.5625rem;
+    padding: 1px 5px;
+  }
+
+  .terminal-header {
+    padding: 0.65rem 0.8rem;
+  }
+
+  .terminal-pill {
+    display: none;
   }
 
   .about-specs-grid {
@@ -3665,14 +3860,89 @@ body {
 
   .btn {
     width: 100%;
+    min-height: 46px;
+    padding: 0.9rem 1rem;
   }
 
   .project-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .project-header-meta {
+    flex-wrap: wrap;
+    gap: 0.45rem 0.75rem;
+  }
+
+  .project-number {
+    font-size: 1.5rem;
+  }
+
+  .project-category {
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+  }
+
+  .project-title {
+    font-size: 1.35rem;
+  }
+
+  .project-actions {
+    gap: 0.85rem;
+  }
+
+  .mockup-code {
+    padding: 0.85rem;
+    font-size: 0.625rem;
+    overflow: hidden;
+  }
+
+  .code-line {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .indent-1 { padding-left: 0.75rem; }
+  .indent-2 { padding-left: 1.35rem; }
+  .indent-3 { padding-left: 1.95rem; }
+
+  .mockup-status-badge {
+    padding: 0.45rem 0.85rem;
+    letter-spacing: 0.06em;
   }
 
   .hud-telemetry-specs {
     grid-template-columns: 1fr;
+  }
+
+  .hud-status-card {
+    padding: 1.15rem;
+  }
+
+  .hud-status-title {
+    font-size: 0.6875rem;
+    line-height: 1.4;
+  }
+
+  .channel-card {
+    gap: 0.75rem;
+  }
+
+  .channel-icon-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  .channel-actions {
+    justify-content: stretch;
+    gap: 0.5rem;
+  }
+
+  .channel-btn {
+    flex: 1 1 0;
+    min-width: 0;
   }
 
   .term-action-bar {
@@ -3684,6 +3954,26 @@ body {
   .term-secondary-btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .term-chrome-bar {
+    padding: 0 0.85rem;
+  }
+
+  .term-title,
+  .term-mode {
+    display: none;
+  }
+
+  .term-prompt-line {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .term-text-input,
+  .term-select-input,
+  .term-textarea-input {
+    font-size: 0.8125rem;
   }
 }
 
