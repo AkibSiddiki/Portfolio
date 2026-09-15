@@ -623,5 +623,205 @@
     });
   } catch (e) {}
 
+  /* --------------------------------------------------------------------------
+     11. FLOATING TECH CONSTELLATION NETWORK GRAPH
+     -------------------------------------------------------------------------- */
+  const constellationContainer = document.getElementById('tech-constellation');
+  const constellationCanvas = document.getElementById('tech-constellation-canvas');
+
+  if (constellationContainer && constellationCanvas) {
+    const ctx = constellationCanvas.getContext('2d');
+    const nodes = Array.from(constellationContainer.querySelectorAll('.tech-float-node'));
+    
+    // Key-to-Element map
+    const nodeMap = new Map();
+    nodes.forEach(node => {
+      const key = node.getAttribute('data-tech');
+      if (key) nodeMap.set(key, node);
+    });
+
+    // Architectural synapse connections
+    const connections = [
+      ['laravel', 'php'],
+      ['laravel', 'mysql'],
+      ['laravel', 'postgres'],
+      ['laravel', 'redis'],
+      ['laravel', 'rest'],
+      ['laravel', 'docker'],
+      ['laravel', 'sslcommerz'],
+      ['php', 'git'],
+      ['php', 'sslcommerz'],
+      ['sslcommerz', 'javascript'],
+      ['sslcommerz', 'rest'],
+      ['mysql', 'postgres'],
+      ['mysql', 'redis'],
+      ['redis', 'docker'],
+      ['docker', 'aws'],
+      ['docker', 'git'],
+      ['rest', 'javascript'],
+      ['rest', 'flutter'],
+      ['rest', 'aws'],
+      ['javascript', 'tailwind'],
+      ['flutter', 'dart'],
+      ['flutter', 'firebase'],
+      ['aws', 'firebase']
+    ];
+
+    // Animated data pulse packets along each connection
+    const packets = connections.map((_, i) => ({
+      speed: 0.00045 + (i % 5) * 0.00012,
+      offset: (i * 0.23) % 1,
+      size: 2.2 + (i % 3) * 0.6
+    }));
+
+    let hoveredTech = null;
+    let animFrameId = null;
+    let isVisible = false;
+    let width = 0;
+    let height = 0;
+    let dpr = 1;
+
+    function resizeCanvas() {
+      const rect = constellationContainer.getBoundingClientRect();
+      width = rect.width;
+      height = rect.height;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      constellationCanvas.width = width * dpr;
+      constellationCanvas.height = height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Node interaction events
+    nodes.forEach(node => {
+      const key = node.getAttribute('data-tech');
+      node.addEventListener('mouseenter', () => {
+        hoveredTech = key;
+        node.classList.add('is-active');
+        // Highlight connected neighbor nodes
+        connections.forEach(([a, b]) => {
+          if (a === key && nodeMap.has(b)) nodeMap.get(b).classList.add('is-active');
+          if (b === key && nodeMap.has(a)) nodeMap.get(a).classList.add('is-active');
+        });
+      });
+      node.addEventListener('mouseleave', () => {
+        hoveredTech = null;
+        nodes.forEach(n => n.classList.remove('is-active'));
+      });
+      node.addEventListener('focus', () => {
+        hoveredTech = key;
+        node.classList.add('is-active');
+      });
+      node.addEventListener('blur', () => {
+        hoveredTech = null;
+        nodes.forEach(n => n.classList.remove('is-active'));
+      });
+    });
+
+    function draw(time) {
+      if (!isVisible) return;
+
+      ctx.clearRect(0, 0, width, height);
+
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      const containerRect = constellationContainer.getBoundingClientRect();
+
+      // Theme colors matching the site
+      const defaultLineColor = isLight ? 'rgba(220, 38, 38, 0.16)' : 'rgba(255, 46, 46, 0.22)';
+      const activeLineColor = isLight ? 'rgba(220, 38, 38, 0.85)' : 'rgba(255, 46, 46, 0.95)';
+      const packetColor = isLight ? '#dc2626' : '#ff2e2e';
+      const glowColor = isLight ? 'rgba(220, 38, 38, 0.45)' : 'rgba(255, 46, 46, 0.65)';
+
+      // Calculate real-time center points of each node (tracking CSS float movement)
+      const positions = new Map();
+      nodes.forEach(node => {
+        const key = node.getAttribute('data-tech');
+        const rect = node.getBoundingClientRect();
+        positions.set(key, {
+          x: rect.left - containerRect.left + rect.width / 2,
+          y: rect.top - containerRect.top + rect.height / 2
+        });
+      });
+
+      // 1. Draw connecting lines
+      connections.forEach(([a, b]) => {
+        const posA = positions.get(a);
+        const posB = positions.get(b);
+        if (!posA || !posB) return;
+
+        const isConnectedToHover = hoveredTech && (a === hoveredTech || b === hoveredTech);
+        const isDimmed = hoveredTech && !isConnectedToHover;
+
+        ctx.beginPath();
+        ctx.moveTo(posA.x, posA.y);
+        ctx.lineTo(posB.x, posB.y);
+
+        if (isConnectedToHover) {
+          ctx.strokeStyle = activeLineColor;
+          ctx.lineWidth = 2.4;
+          ctx.shadowColor = glowColor;
+          ctx.shadowBlur = 10;
+        } else {
+          ctx.strokeStyle = isDimmed ? (isLight ? 'rgba(220, 38, 38, 0.05)' : 'rgba(255, 46, 46, 0.07)') : defaultLineColor;
+          ctx.lineWidth = 1.2;
+          ctx.shadowBlur = 0;
+        }
+
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+      });
+
+      // 2. Draw animated traveling photon data packets
+      if (!prefersReducedMotion) {
+        connections.forEach(([a, b], idx) => {
+          const posA = positions.get(a);
+          const posB = positions.get(b);
+          if (!posA || !posB) return;
+
+          const packet = packets[idx];
+          const progress = (time * packet.speed + packet.offset) % 1;
+          const px = posA.x + (posB.x - posA.x) * progress;
+          const py = posA.y + (posB.y - posA.y) * progress;
+
+          const isConnectedToHover = hoveredTech && (a === hoveredTech || b === hoveredTech);
+
+          ctx.beginPath();
+          ctx.arc(px, py, isConnectedToHover ? packet.size * 1.5 : packet.size, 0, Math.PI * 2);
+          ctx.fillStyle = packetColor;
+          if (isConnectedToHover) {
+            ctx.shadowColor = glowColor;
+            ctx.shadowBlur = 8;
+          } else {
+            ctx.shadowBlur = 0;
+          }
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        });
+      }
+
+      animFrameId = requestAnimationFrame(draw);
+    }
+
+    // Performance: Pause when section is scrolled out of view
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) {
+          resizeCanvas();
+          if (!animFrameId) animFrameId = requestAnimationFrame(draw);
+        } else {
+          if (animFrameId) {
+            cancelAnimationFrame(animFrameId);
+            animFrameId = null;
+          }
+        }
+      });
+    }, { threshold: 0.05 });
+
+    observer.observe(constellationContainer);
+  }
+
 })();
 
