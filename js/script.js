@@ -102,7 +102,8 @@
      3. SCROLL SPY (ACTIVE NAVIGATION ITEM)
      -------------------------------------------------------------------------- */
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link:not(.contact-pill)');
+  const dockLinks = document.querySelectorAll('.dock-link');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
   const observerOptions = {
     root: null,
@@ -114,7 +115,18 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
-        navLinks.forEach(link => {
+        
+        // Update Left Cyber-Dock active state
+        dockLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+
+        // Update Mobile Drawer active state
+        mobileNavLinks.forEach(link => {
           if (link.getAttribute('href') === `#${id}`) {
             link.classList.add('active');
           } else {
