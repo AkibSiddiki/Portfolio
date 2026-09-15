@@ -4789,10 +4789,8 @@ body {
   }
 
   .contact-hud-col,
-  .contact-terminal-col,
   .hud-status-card,
-  .contact-channels-stack,
-  .term-window-card {
+  .contact-channels-stack {
     min-width: 0;
     width: 100%;
   }

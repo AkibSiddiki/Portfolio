@@ -605,12 +605,12 @@
   }
 
   function handleThemeToggle() {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
     const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
     applyTheme(nextTheme, true);
   }
 
-  const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  const activeTheme = document.documentElement.getAttribute('data-theme') || 'dark';
   updateThemeAria(activeTheme);
 
   if (themeToggleBtn) {
