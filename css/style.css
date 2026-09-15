@@ -3755,16 +3755,17 @@ body {
 /* 2-Column Responsive Layout */
 .contact-layout-grid {
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  /* grid-template-columns: 1fr 1.25fr; */
   gap: 2rem;
   align-items: start;
 }
 
 /* Left Column: System HUD & Direct Channels */
 .contact-hud-col {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1.25rem;
+  grid-template-columns: 1fr 1fr;
+  align-self: start;
 }
 
 .hud-status-card {
@@ -4794,6 +4795,10 @@ body {
   .term-window-card {
     min-width: 0;
     width: 100%;
+  }
+
+  .contact-hud-col {
+    grid-template-columns: 1fr;
   }
 
   .channel-actions {
