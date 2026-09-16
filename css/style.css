@@ -4559,6 +4559,15 @@ body {
   .hud-mid-stat {
     display: none;
   }
+
+  /* Responsive Order Utilities */
+  .order-1-mobile {
+    order: 1;
+  }
+
+  .order-2-mobile {
+    order: 2;
+  }
 }
 
 @media (max-width: 768px) {

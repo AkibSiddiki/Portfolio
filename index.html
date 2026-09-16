@@ -451,9 +451,8 @@
 
       <div class="container hero-container">
         <div class="hero-grid">
-
           <!-- Left Column: Headline & Intro -->
-          <div class="hero-text-col">
+          <div class="hero-text-col order-2-mobile">
             <!-- Identity: Greeting, Name & Position -->
             <div class="hero-identity-group reveal-element">
               <div class="hero-greeting">
@@ -518,7 +517,7 @@
           </div>
 
           <!-- Right Column: Developer Portrait & Visual Showcase -->
-          <div class="hero-visual-col reveal-element">
+          <div class="hero-visual-col order-1-mobile reveal-element">
             <div class="hero-showcase-container">
               <!-- Mode Switcher Tabs -->
               <div class="hero-view-switcher" role="tablist" aria-label="Hero visual view switcher">
@@ -819,7 +818,8 @@
                 <li>Design optimized <strong>MySQL</strong> schemas, composite indexes, and <strong>Redis</strong>
                   caching layers.</li>
                 <li>Build high-throughput <strong>RESTful APIs</strong> for web clients and cross-platform
-                  <strong>Flutter</strong> mobile apps.</li>
+                  <strong>Flutter</strong> mobile apps.
+                </li>
                 <li>Integrate <strong>AWS S3</strong> media storage and <strong>Firebase FCM</strong> real-time
                   notifications.</li>
               </ul>
@@ -853,7 +853,8 @@
               </p>
               <ul class="timeline-bullets">
                 <li>Built admin control panels, CRUD interfaces, and custom CMS modules using <strong>PHP</strong> and
-                  <strong>MySQL</strong>.</li>
+                  <strong>MySQL</strong>.
+                </li>
                 <li>Optimized legacy database queries to eliminate N+1 bottlenecks and improve application throughput.
                 </li>
                 <li>Collaborated with teams to ship responsive UI layouts and resolve production bugs.</li>
@@ -1249,7 +1250,8 @@
                     {</div>
                   <div class="code-line indent-2"><span class="c-key">return</span> <span
                       class="c-cls">Article</span>::<span class="c-fn">where</span>(<span class="c-str">'slug'</span>,
-                    <span class="c-var">$slug</span>)</div>
+                    <span class="c-var">$slug</span>)
+                  </div>
                   <div class="code-line indent-3">-&gt;<span class="c-fn">with</span>([<span
                       class="c-str">'category'</span>, <span class="c-str">'tags'</span>, <span
                       class="c-str">'author'</span>])</div>
