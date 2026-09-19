@@ -1118,6 +1118,15 @@
 
           <!-- PROJECT 01: bdnews24 Flutter Application -->
           <article class="project-card reveal-element" data-project="01">
+            <div class="project-visual" aria-label="bdnews24 Mobile Application Preview">
+              <div class="project-image-wrapper">
+                <img src="assets/images/projects/project-bdnews24.jpg" alt="bdnews24 Mobile Application Interface" class="project-image" loading="lazy">
+                <div class="project-image-overlay"></div>
+                <div class="project-badge">
+                  <span class="status-live-dot"></span> 24/7 LIVE STREAMING API
+                </div>
+              </div>
+            </div>
             <div class="project-content">
               <div class="project-header-meta">
                 <span class="project-number">01</span>
@@ -1151,48 +1160,19 @@
                 </a>
               </div>
             </div>
-
-            <!-- Tasteful Abstract Architectural Illustration -->
-            <div class="project-visual" aria-label="bdnews24 Architecture Preview">
-              <div class="tech-canvas-mockup">
-                <div class="mockup-bar">
-                  <span class="m-dot red"></span>
-                  <span class="m-dot yellow"></span>
-                  <span class="m-dot green"></span>
-                  <span class="m-title">bdnews24_app_architecture.dart</span>
-                </div>
-                <div class="mockup-code">
-                  <div class="code-line"><span class="c-key">class</span> <span class="c-cls">NewsRepository</span> {
-                  </div>
-                  <div class="code-line indent-1"><span class="c-key">final</span> <span class="c-cls">ApiClient</span>
-                    _client;</div>
-                  <div class="code-line indent-1"><span class="c-key">final</span> <span class="c-cls">LocalCache</span>
-                    _cache;</div>
-                  <div class="code-line indent-1"><span class="c-key">Future</span>&lt;<span
-                      class="c-cls">List</span>&lt;<span class="c-cls">Article</span>&gt;&gt; <span
-                      class="c-fn">fetchHeadlines</span>() <span class="c-key">async</span> {</div>
-                  <div class="code-line indent-2"><span class="c-key">if</span> (<span class="c-key">await</span>
-                    _network.<span class="c-fn">isOffline</span>()) {</div>
-                  <div class="code-line indent-3"><span class="c-key">return</span> _cache.<span
-                      class="c-fn">getCachedHeadlines</span>();</div>
-                  <div class="code-line indent-2">}</div>
-                  <div class="code-line indent-2"><span class="c-key">final</span> res = <span
-                      class="c-key">await</span> _client.<span class="c-fn">get</span>(<span
-                      class="c-str">'/api/v1/news/breaking'</span>);</div>
-                  <div class="code-line indent-2"><span class="c-key">return</span> _cache.<span
-                      class="c-fn">saveAndEmit</span>(res.<span class="c-fn">toModels</span>());</div>
-                  <div class="code-line indent-1">}</div>
-                  <div class="code-line">}</div>
-                </div>
-                <div class="mockup-status-badge">
-                  <span class="status-live-dot"></span> 24/7 LIVE STREAMING API
-                </div>
-              </div>
-            </div>
           </article>
 
           <!-- PROJECT 02: Samakal News Portal & Publishing Platform -->
           <article class="project-card reveal-element" data-project="02">
+            <div class="project-visual" aria-label="Samakal Digital News Platform Preview">
+              <div class="project-image-wrapper">
+                <img src="assets/images/projects/project-samakal.jpg" alt="Samakal Digital News Publishing Platform" class="project-image" loading="lazy">
+                <div class="project-image-overlay"></div>
+                <div class="project-badge">
+                  <span class="status-live-dot"></span> SUB-10MS CACHE HIT RESPONSE
+                </div>
+              </div>
+            </div>
             <div class="project-content">
               <div class="project-header-meta">
                 <span class="project-number">02</span>
@@ -1226,51 +1206,19 @@
                 </a>
               </div>
             </div>
-
-            <!-- Tasteful Abstract Architectural Illustration -->
-            <div class="project-visual" aria-label="Samakal Architecture Preview">
-              <div class="tech-canvas-mockup">
-                <div class="mockup-bar">
-                  <span class="m-dot red"></span>
-                  <span class="m-dot yellow"></span>
-                  <span class="m-dot green"></span>
-                  <span class="m-title">ArticleController.php [Redis Cache Layer]</span>
-                </div>
-                <div class="mockup-code">
-                  <div class="code-line"><span class="c-key">public function</span> <span
-                      class="c-fn">show</span>(string <span class="c-var">$slug</span>): <span
-                      class="c-cls">JsonResponse</span></div>
-                  <div class="code-line">{</div>
-                  <div class="code-line indent-1"><span class="c-var">$cacheKey</span> = <span
-                      class="c-str">"article:slug:{$slug}"</span>;</div>
-                  <div class="code-line indent-1"><span class="c-var">$article</span> = <span
-                      class="c-cls">Cache</span>::<span class="c-fn">remember</span>(<span
-                      class="c-var">$cacheKey</span>, <span class="c-num">3600</span>, <span
-                      class="c-key">function</span> () <span class="c-key">use</span> (<span class="c-var">$slug</span>)
-                    {</div>
-                  <div class="code-line indent-2"><span class="c-key">return</span> <span
-                      class="c-cls">Article</span>::<span class="c-fn">where</span>(<span class="c-str">'slug'</span>,
-                    <span class="c-var">$slug</span>)
-                  </div>
-                  <div class="code-line indent-3">-&gt;<span class="c-fn">with</span>([<span
-                      class="c-str">'category'</span>, <span class="c-str">'tags'</span>, <span
-                      class="c-str">'author'</span>])</div>
-                  <div class="code-line indent-3">-&gt;<span class="c-fn">published</span>()</div>
-                  <div class="code-line indent-3">-&gt;<span class="c-fn">firstOrFail</span>();</div>
-                  <div class="code-line indent-1">});</div>
-                  <div class="code-line indent-1"><span class="c-key">return</span> response()-&gt;<span
-                      class="c-fn">json</span>(<span class="c-var">$article</span>);</div>
-                  <div class="code-line">}</div>
-                </div>
-                <div class="mockup-status-badge">
-                  <span class="status-live-dot"></span> SUB-10MS CACHE HIT RESPONSE
-                </div>
-              </div>
-            </div>
           </article>
 
           <!-- PROJECT 03: Step Footwear E-Commerce Platform -->
           <article class="project-card reveal-element" data-project="03">
+            <div class="project-visual" aria-label="Step Footwear E-Commerce Preview">
+              <div class="project-image-wrapper">
+                <img src="assets/images/projects/project-step-footwear.jpg" alt="Step Footwear E-Commerce & Inventory Hub" class="project-image" loading="lazy">
+                <div class="project-image-overlay"></div>
+                <div class="project-badge">
+                  <span class="status-live-dot"></span> ATOMIC TRANSACTION VERIFIED
+                </div>
+              </div>
+            </div>
             <div class="project-content">
               <div class="project-header-meta">
                 <span class="project-number">03</span>
@@ -1304,48 +1252,19 @@
                 </a>
               </div>
             </div>
-
-            <!-- Tasteful Abstract Architectural Illustration -->
-            <div class="project-visual" aria-label="Step Footwear Architecture Preview">
-              <div class="tech-canvas-mockup">
-                <div class="mockup-bar">
-                  <span class="m-dot red"></span>
-                  <span class="m-dot yellow"></span>
-                  <span class="m-dot green"></span>
-                  <span class="m-title">OrderFulfillmentPipeline.php</span>
-                </div>
-                <div class="mockup-code">
-                  <div class="code-line"><span class="c-cls">DB</span>::<span class="c-fn">transaction</span>(<span
-                      class="c-key">function</span> () <span class="c-key">use</span> (<span
-                      class="c-var">$order</span>, <span class="c-var">$cart</span>) {</div>
-                  <div class="code-line indent-1"><span class="c-key">foreach</span> (<span
-                      class="c-var">$cart</span>-&gt;items <span class="c-key">as</span> <span
-                      class="c-var">$item</span>) {</div>
-                  <div class="code-line indent-2"><span class="c-var">$sku</span> = <span
-                      class="c-cls">Variant</span>::<span class="c-fn">lockForUpdate</span>()-&gt;<span
-                      class="c-fn">findOrFail</span>(<span class="c-var">$item</span>-&gt;id);</div>
-                  <div class="code-line indent-2"><span class="c-cls">Ensure</span>::<span
-                      class="c-fn">hasSufficientStock</span>(<span class="c-var">$sku</span>, <span
-                      class="c-var">$item</span>-&gt;qty);</div>
-                  <div class="code-line indent-2"><span class="c-var">$sku</span>-&gt;<span
-                      class="c-fn">decrementStock</span>(<span class="c-var">$item</span>-&gt;qty);</div>
-                  <div class="code-line indent-1">}</div>
-                  <div class="code-line indent-1"><span class="c-var">$order</span>-&gt;<span
-                      class="c-fn">markPaid</span>();</div>
-                  <div class="code-line indent-1"><span class="c-cls">Event</span>::<span
-                      class="c-fn">dispatch</span>(<span class="c-key">new</span> <span
-                      class="c-cls">OrderConfirmed</span>(<span class="c-var">$order</span>));</div>
-                  <div class="code-line">});</div>
-                </div>
-                <div class="mockup-status-badge">
-                  <span class="status-live-dot"></span> ATOMIC TRANSACTION VERIFIED
-                </div>
-              </div>
-            </div>
           </article>
 
           <!-- PROJECT 04: Enterprise HRM & Workforce Management System -->
           <article class="project-card reveal-element" data-project="04">
+            <div class="project-visual" aria-label="Enterprise HRM Preview">
+              <div class="project-image-wrapper">
+                <img src="assets/images/projects/project-hrm.jpg" alt="Enterprise HRM & Workforce Management System" class="project-image" loading="lazy">
+                <div class="project-image-overlay"></div>
+                <div class="project-badge">
+                  <span class="status-live-dot"></span> MULTI-TIER RBAC SECURED
+                </div>
+              </div>
+            </div>
             <div class="project-content">
               <div class="project-header-meta">
                 <span class="project-number">04</span>
@@ -1379,49 +1298,19 @@
                 </a>
               </div>
             </div>
+          </article>
 
-            <!-- Tasteful Abstract Architectural Illustration -->
-            <div class="project-visual" aria-label="HRM Architecture Preview">
-              <div class="tech-canvas-mockup">
-                <div class="mockup-bar">
-                  <span class="m-dot red"></span>
-                  <span class="m-dot yellow"></span>
-                  <span class="m-dot green"></span>
-                  <span class="m-title">PayrollEngine.php [RBAC & Calculations]</span>
-                </div>
-                <div class="mockup-code">
-                  <div class="code-line"><span class="c-key">public function</span> <span
-                      class="c-fn">calculateMonthlySalary</span>(<span class="c-cls">Employee</span> <span
-                      class="c-var">$emp</span>): <span class="c-cls">Payslip</span></div>
-                  <div class="code-line">{</div>
-                  <div class="code-line indent-1"><span class="c-var">$attendance</span> = <span
-                      class="c-var">$emp</span>-&gt;attendances()-&gt;<span class="c-fn">inCurrentBillingCycle</span>();
-                  </div>
-                  <div class="code-line indent-1"><span class="c-var">$gross</span> = <span
-                      class="c-var">$emp</span>-&gt;structure-&gt;basic + <span
-                      class="c-var">$emp</span>-&gt;structure-&gt;allowances;</div>
-                  <div class="code-line indent-1"><span class="c-var">$deductions</span> = <span
-                      class="c-cls">TaxEngine</span>::<span class="c-fn">compute</span>(<span
-                      class="c-var">$gross</span>, <span class="c-var">$emp</span>-&gt;tier);</div>
-                  <div class="code-line indent-1"><span class="c-key">return</span> <span
-                      class="c-cls">Payslip</span>::<span class="c-fn">create</span>([</div>
-                  <div class="code-line indent-2"><span class="c-str">'employee_id'</span> =&gt; <span
-                      class="c-var">$emp</span>-&gt;id,</div>
-                  <div class="code-line indent-2"><span class="c-str">'net_payable'</span> =&gt; <span
-                      class="c-var">$gross</span> - <span class="c-var">$deductions</span> - <span
-                      class="c-var">$attendance</span>-&gt;unpaidLoss(),</div>
-                  <div class="code-line indent-1">]);</div>
-                  <div class="code-line">}</div>
-                </div>
-                <div class="mockup-status-badge">
-                  <span class="status-live-dot"></span> MULTI-TIER RBAC SECURED
+          <!-- PROJECT 05: eMythMakers Dynamic CMS & Publishing Framework -->
+          <article class="project-card reveal-element" data-project="05">
+            <div class="project-visual" aria-label="eMythMakers Dynamic CMS Preview">
+              <div class="project-image-wrapper">
+                <img src="assets/images/projects/project-emythmakers.jpg" alt="eMythMakers Dynamic CMS & Publishing Framework" class="project-image" loading="lazy">
+                <div class="project-image-overlay"></div>
+                <div class="project-badge">
+                  <span class="status-live-dot"></span> DYNAMIC HEADLESS PIPELINE
                 </div>
               </div>
             </div>
-          </article>
-
-          <!-- PROJECT 05: eMythMakers Dynamic CMS Engine -->
-          <article class="project-card reveal-element" data-project="05">
             <div class="project-content">
               <div class="project-header-meta">
                 <span class="project-number">05</span>
@@ -1453,44 +1342,6 @@
                   class="project-link secondary-link">
                   <span>GitHub Profile →</span>
                 </a>
-              </div>
-            </div>
-
-            <!-- Tasteful Abstract Architectural Illustration -->
-            <div class="project-visual" aria-label="CMS Architecture Preview">
-              <div class="tech-canvas-mockup">
-                <div class="mockup-bar">
-                  <span class="m-dot red"></span>
-                  <span class="m-dot yellow"></span>
-                  <span class="m-dot green"></span>
-                  <span class="m-title">HeadlessContentEndpoint.php</span>
-                </div>
-                <div class="mockup-code">
-                  <div class="code-line"><span class="c-key">public function</span> <span
-                      class="c-fn">renderSchema</span>(string <span class="c-var">$pageUri</span>): <span
-                      class="c-cls">SchemaResource</span></div>
-                  <div class="code-line">{</div>
-                  <div class="code-line indent-1"><span class="c-var">$layout</span> = <span
-                      class="c-cls">LayoutRegistry</span>::<span class="c-fn">resolveByUri</span>(<span
-                      class="c-var">$pageUri</span>);</div>
-                  <div class="code-line indent-1"><span class="c-key">return</span> <span class="c-key">new</span> <span
-                      class="c-cls">SchemaResource</span>([</div>
-                  <div class="code-line indent-2"><span class="c-str">'meta'</span> =&gt; <span
-                      class="c-var">$layout</span>-&gt;<span class="c-fn">seoTags</span>(),</div>
-                  <div class="code-line indent-2"><span class="c-str">'sections'</span> =&gt; <span
-                      class="c-var">$layout</span>-&gt;blocks-&gt;<span class="c-fn">map</span>(<span
-                      class="c-key">fn</span>(<span class="c-var">$b</span>) =&gt; <span
-                      class="c-var">$b</span>-&gt;<span class="c-fn">compile</span>()),</div>
-                  <div class="code-line indent-2"><span class="c-str">'s3_assets'</span> =&gt; <span
-                      class="c-cls">Storage</span>::<span class="c-fn">disk</span>(<span
-                      class="c-str">'s3'</span>)-&gt;<span class="c-fn">temporaryUrls</span>(<span
-                      class="c-var">$layout</span>-&gt;media),</div>
-                  <div class="code-line indent-1">]);</div>
-                  <div class="code-line">}</div>
-                </div>
-                <div class="mockup-status-badge">
-                  <span class="status-live-dot"></span> DYNAMIC HEADLESS PIPELINE
-                </div>
               </div>
             </div>
           </article>

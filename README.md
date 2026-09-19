@@ -47,7 +47,7 @@ akib-siddiki/
    - `03` **Step Footwear E-Commerce & Inventory Hub** (Laravel · MySQL · Payment Gateway API)
    - `04` **Enterprise HRM & Workforce Management System** (Laravel · MySQL · RBAC · Payroll Engine)
    - `05` **eMythMakers Dynamic CMS & Publishing Framework** (Laravel · PHP · MySQL · AWS S3)
-   - Each project card features a bespoke abstract architectural code mockup.
+   - High-fidelity visual application showcases in a responsive two-column grid with live production status badges.
 7. **What I Do / Expertise**: 6 structured engineering disciplines.
 8. **Development Philosophy**: Real-world engineering principles on simplicity, database normalization, performance, and pragmatic utility.
 9. **Contact & Channels**: 1-click email copy with toast feedback, direct WhatsApp/phone link, LinkedIn, and GitHub.
